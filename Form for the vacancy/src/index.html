@@ -1,0 +1,148 @@
+<DOCTYPE!>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Вакансия: Front-end Developer</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <style type="text/css">
+           html {
+                 background-color: #f9fcfa;}
+
+            body {
+                 width: 800px;
+                 margin: 0 auto;
+                 background-color: #a2efab;
+                 padding: 0px 20px 20px 20px;
+                 border: 3px solid #013006;
+                 border-radius: 0 30px;}
+
+            h1 {
+             font-size: 36;
+             font-family: Georgia;
+             color: #013006;
+            }
+            p, li, label {
+             font-size: 16;
+             font-family: Georgia;
+             color: #013006;
+            }
+            p, span, label{
+                line-height: 1.5;
+                margin-top: 15;
+                margin-bottom: 15;}
+
+            li{
+                 margin-left:-20;}
+
+            .main_information {
+                height:200px;}
+
+            .main_text{
+                font-size: 18;
+                margin-top: 0;
+                margin-bottom: 5;}
+
+            Img{
+                margin: 0 20px 0 0;}
+
+            form, label{
+                display: inline;}
+
+            table {
+            background: #013006;
+            color: black;
+            font-size: 14;
+             font-family: Georgia, 'Times New Roman', Times, serif;}
+
+            td, th {
+            background: #a2efab;
+            padding: 5px;
+            border: 1px solid #fff;}
+
+            .button{
+                text-align: center;}
+
+           </style>
+    </head>
+<body>
+    <h1>Вакансия: Front-end Developer</h1>
+    <div class=main_information>
+    <img src="photo1.jpg" alt="My photo"  align="left" hspace="10" height="200px"/>
+            <p class=main_text><b>Имя:</b> Анна Беликова</p>
+            <p class=main_text><a href="https://github.com/AnnaBelikova/For-learning.git">Ссылка на репозиторий GitHub</a></p>
+            <p class=main_text><b>Опыт работы:</b> нет</p>
+            <p class=main_text><b>Телефон:+7-911-***-**-**</b></p>
+            <p class=main_text><b>E-mail:bel4onok_spb@mail.ru</b></p>
+
+    </div><br>
+<hr>
+        <p><b>Дата собеседования:</b> <input type="date" name="calendar">
+            <i class="far fa-calendar-alt"></i>
+        </p>
+       <p> <label><b>Уровень английского языка:</b></label><br>
+        <input type="radio" id="Плохо" value="Плохо" name="english_knowledge"><label for="Плохо" class="light">Плохо</label>
+        <input type="radio" id="Средне" value="Средне" name="english_knowledge"><label for="Средне" class="light">Средне</label>
+        <input type="radio" id="Хорошо" value="Хорошо" name="english_knowledge"><label for="Хорошо" class="light">Хорошо</label>
+        <input type="radio" id="Превосходно" value="Превосходно" name="english_knowledge"><label for="Превосходно" class="light">Превосходно</label>
+    </p>
+        <p><b>Ключевые навыки:</b><br>
+            <ul>
+                <li>HTML</li>
+                <li>CSS/LESS</li>
+                <li>Javascript</li>
+            </ul>
+           <p> <form action="index.html" method="post"> <input type="text" id="skills" name="skills" placeholder="Введите навык"></form> <button>Добавить в список</button></p>
+        </p>
+<p>
+        <label for="sociability"><b>Коммуникабельность:</b></label>
+          <select id="sociability" name="person's_sociability">
+              <option selected="selected">Выберите значение</option>
+              <option value="very_sociability">Очень коммуникабелен и всегда готов к общению и обсуждению</option>
+              <option value="middle_sociability">Всегда общаюсь только по делу</option>
+              <option value="0_sociability">Кто все эти люди??? Уберите их от меня!!!</option>
+          </select>
+</p>
+<span>
+    <label for=salary><b>Желаемая зарплата (руб.):</b></label>
+    <form action="index.html" method="post">
+            <input type="number" id="salary" name="salary" placeholder="Введите значение..." min="0" max="200000" step="1000">
+    </form>
+</span>
+
+<p></p><label><b>Подходит по критериям:</b></label> <br>
+<input type="checkbox" id="english" value="english_knowledge" name="person_knowledge"><label class="light" for="english">Знание английского</label>
+<input type="checkbox" id="salary" value="salary_expectation" name="person_salary"><label class="light" for="salary">Оклад</label>
+<input type="checkbox" id="skills" value="skills" name="person_skills"><label class="light" for="skills">Навыки</label>
+<input type="checkbox" id="all_inclusive_person" value="all_inclusive_person" name="the_right_man_in_the_right_place"><label class="light" for="all_inclusive">Сразу видно, что свой человек</label></p>
+
+<p><label><b>Образование, курсы и т.п.^</b></label>
+
+<table>
+    <tr>
+        <th>№</th>
+        <th>Сроки обучения</th>
+        <th>Наименование учебного заведения, курсов...</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>апрель-май 2017</td>
+        <td>Учебный центр Бруноям, Курсы по графическому дизайну (Photoshop+Illustrator)</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>2010-2012</td>
+        <td>СПбГПУ, Переводчик в сфере профессиональных коммуникаций (английский язык)</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>2007-2012</td>
+        <td>СПбГПУ, Государственное и муниципальное управление</td>
+    </tr>
+</table>
+</p>
+<div class=button>
+ <button type="submit">Отправить</button>
+</div>
+</body>
+
+</html>
