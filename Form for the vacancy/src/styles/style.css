@@ -1,0 +1,165 @@
+
+html {
+      background-color: #f9fcfa;}
+
+ body {
+      width: 800px;
+      margin: 0 auto;
+      background:linear-gradient(45deg, #a2efab, rgb(221, 250, 227), #a2efab);
+     /* background: radial-gradient(circle farthest-corner at 150px 1050px,#a2efab, #FEFFFF); */
+      padding: 10px 20px 10px 20px;
+      border: 3px groove rgb(45, 133, 58);
+      border-radius: 0 30px;}
+img{
+    float: left;
+}
+
+ h1 {
+  font-size: 40;
+  font-family: Georgia;
+ }
+ .h1 {
+    color:  rgb(30, 97, 40);
+    text-shadow: #a2aaa5 5px 5px 5px;
+   }
+.h2, .eng, .key_skills{
+    text-shadow: #a2aaa5 1px 2px 2px;  
+}
+ p, li, label, button {
+  font-size: 16;
+  font-family: Georgia;
+  color: rgb(23, 71, 30);
+   }
+ }
+ p, span, label{
+     line-height: 1.5;
+     margin-top: 15;
+     margin-bottom: 15;
+    }
+
+ li{
+      margin-left:-20;}
+
+ .main_information {
+     height:200px;}
+
+ .main_text{
+     font-size: 18;
+     margin-top: 0;
+     margin-bottom: 5;
+     text-shadow: #a2aaa5 1px 1px 1px;
+     }
+
+ Img{
+     margin: 0 20px 0 0;}
+
+ form, label{
+     display: inline;}
+
+ table {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 16;
+ width: 100%;
+  border-radius: 20px;
+  border-spacing: 0;}
+
+thead{
+    color:rgb(255, 255, 255);
+    background-color:rgb(45, 133, 58);
+    text-shadow:-1px -1px 1 px #666;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-weight:bold;
+    text-align:center;
+    border-radius: 10px;
+}
+tbody{
+    background: #79ee87;
+    border-radius: 10px;
+   color: rgb(23, 71, 30);
+}
+td, tr {
+    padding: 5px;
+    border: 1px solid white;
+}
+
+thead tr:first-child td:first-child  {
+    border-top-left-radius: 10px;
+    }
+thead tr:first-child td:last-child  {
+        border-top-right-radius: 10px;
+        border-right: none;
+        }
+tbody tr:last-child td:first-child {
+ border-radius: 0 0 0 10px;
+}
+tbody tr:last-child td:last-child {
+border-radius: 0 0 10px 0;
+ }
+tr td:last-child {
+ border-right: none;
+ }
+
+
+ tbody tr:hover {
+    background: rgb(45, 133, 58);
+    color:white;
+   }
+   input, select{
+outline:none;
+font-family: Georgia;
+color: rgb(23, 71, 30);
+border: 1px solid  rgb(23, 71, 30);
+padding-left:5px;
+background-color:#79ee87;
+   }
+
+.line_form{
+       width:400px;
+       height:30px;
+   }
+   .salary_form{
+    width:200px;
+    height:30px;
+   }
+
+ button, input, select{
+    cursor: pointer;
+    border-radius:4px}
+
+ button{
+     text-align: center;
+     color: rgb(23, 71, 30);
+     background: #79ee87;
+     background-position: 0px 0px;
+     border: 3px outset rgb(66, 158, 101);
+     border-bottom: 2px outset rgb(66, 158, 101);
+     box-shadow:  0 0 10px rgba(0,0,0,0.5);
+     padding: 5px;
+
+    }
+button:hover{
+    color: rgb(66, 19, 194);
+    background-color: rgb(134, 231, 147);
+    opacity:0.8;
+}
+button:active{
+    color: rgb(66, 19, 194);
+    background-color: rgb(47, 92, 54);
+    opacity:0.8;
+
+}
+.send_the_form{
+    text-align: center;
+    }
+
+a:link{
+    text-decoration:none;
+    color:  rgb(3, 117, 108);
+}
+a:hover{
+        color: rgb(243, 6, 6);
+       }
+
+
+</style>
