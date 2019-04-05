@@ -41,17 +41,18 @@ img{
       margin-left:-20;}
 
  .main_information {
-     height:200px;}
+     height:200px;
+     margin-bottom:20px;}
 
  .main_text{
      font-size: 18;
-     margin-top: 0;
-     margin-bottom: 5;
      text-shadow: #a2aaa5 1px 1px 1px;
      }
 
  Img{
-     margin: 0 20px 0 0;}
+     float: left;
+     margin-right: 20px;
+    }
 
  form, label{
      display: inline;}
@@ -60,8 +61,7 @@ img{
 font-family: Georgia, 'Times New Roman', Times, serif;
 font-size: 16;
  width: 100%;
-  border-radius: 20px;
-  border-spacing: 0;
+border-spacing: 0;
 margin-top:10px;}
 
 thead{
@@ -72,11 +72,9 @@ thead{
     padding: 10px 20px;
     font-weight:bold;
     text-align:center;
-    border-radius: 10px;
 }
 tbody{
     background: #79ee87;
-    border-radius: 10px;
    color: rgb(23, 71, 30);
 }
 td, tr {
@@ -86,16 +84,20 @@ td, tr {
 
 thead tr:first-child td:first-child  {
     border-top-left-radius: 10px;
+    -moz-border-top-left-radius: 10px;
     }
 thead tr:first-child td:last-child  {
         border-top-right-radius: 10px;
+       -moz-border-top-right-radius: 10px;
         border-right: none;
         }
 tbody tr:last-child td:first-child {
- border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 10px;
+    -moz-border-radius: 0 0 0 10px;
 }
 tbody tr:last-child td:last-child {
-border-radius: 0 0 10px 0;
+    border-radius: 0 0 10px 0;
+    -moz-border-radius: 0 0 10px 0;
  }
 tr td:last-child {
  border-right: none;
@@ -114,6 +116,9 @@ border: 1px solid  rgb(23, 71, 30);
 padding-left:5px;
 background-color:#79ee87;
    }
+.calendar{
+    height:30px;
+}
 
 .line_form{
        width:400px;
