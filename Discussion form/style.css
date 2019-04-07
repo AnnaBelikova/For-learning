@@ -1,0 +1,122 @@
+html {
+    background-color: #f9fcfa;
+}
+body{
+    width: 790px;
+    height:590px;
+    margin:0 auto;
+    margin-top: 10px;
+    border:5px ridge #87CEEB;
+    border-radius:4px;
+    background:#4169E1;
+    font-family: Verdana;
+    color: white;
+}
+header{
+    height:68px;
+    border-bottom: 2px ridge #87CEEB;
+    margin-top:0px;
+    margin-bottom:10px;
+    background-color: #00BFFF;
+    color: white;
+}
+.close{
+    margin:0 0 0 775px;
+    padding:0px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px #000;
+    background-color: transparent;
+    border:0px;
+}
+.close:hover {
+    color: red;
+}
+.close:active {
+    color: darkred;
+}
+h1{
+    margin:0px 0px 0px 0px ;
+    padding:0px 0px 0 15px;
+    font-size:28px;
+    line-height:1em;
+    text-shadow: 2px 2px 5px #000;
+}
+.block_1{
+    display:inline-block;
+    font-size: 10px;
+    margin:0;
+    padding-left:15px;
+    padding-bottom:15px;
+}
+
+.main{
+    display:flex;
+    flex-direction: column;
+    align-content:space-between;
+    width: 785px;
+    height:500px;
+    overflow: auto;
+}
+
+.main__massage{
+display:flex;
+flex-direction:row;
+justify-content: flex-start;
+}
+.main__massage_box_one, .main__massage_name_and_text{
+    padding-top:10px;
+}
+.main__massage_box_one{
+width:147px;
+border-right: 3px ridge #87CEEB;
+}
+.main__massage_box_one_circle{
+    width:50px;
+    height:50px;
+    display:block;
+    border-radius:50px;
+    border:1px outset #87CEEB;
+    box-shadow: 1px 1px 3px #000;
+    font-size:16px;
+    font-weight:bold;
+    color:#fff;
+    line-height:50px;
+    text-align:center;
+    background-color: #00BFFF;
+    float: left;
+    margin:5px 5px 5px 10px;
+    text-shadow: 1px 1px 3px #000;
+
+}
+.main__massage_box_one_date_and_time_date{
+margin:18px 0px 0px 0px;
+line-height: 1em;
+color:white;
+font-size: 12px;
+}
+.main__massage_box_one_date_and_time_time{
+    margin:1px 0px 0px 0px;
+    line-height: 1em;
+    font-size: 12px;
+}
+
+
+.main__massage_name_and_text{
+margin-left:10px;
+}
+.main__massage_name_and_text_name{
+    margin:1px 0px 2px 0px;
+    font-size:14px;
+}
+.main__massage_name_and_text_text{
+    width:580px;
+    margin-top:2px;
+    background-color: #1E90FF;
+    border:2px solid #6495ED;
+    border-radius: 5px;
+    padding:5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 3px #000;
+}
