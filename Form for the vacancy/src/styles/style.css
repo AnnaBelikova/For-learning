@@ -166,7 +166,9 @@ a:link{
 a:hover{
         color: rgb(243, 6, 6);
        }
-
+.social{
+margin:10px 0px 10px 0px;
+}
 
 
 </style>

@@ -23,34 +23,28 @@
             <i class="far fa-calendar-alt"></i>
         </label>
         </p>
-       <p> <label class="eng" ><b>Уровень английского языка:</b></label>
+       <p> <label class="eng" ><b>Уровень английского языка:</b></label></p>
        <input type="radio" id="bad_eng" value="bad" name="english_knowledge"> <label for="bad_eng" class="light">Плохо</label>
         <input type="radio" id="middle_eng" value="middle" name="english_knowledge"><label for="middle_eng" class="light">Средне</label>
         <input type="radio" id="good_eng" value="good" name="english_knowledge"><label for="good_eng" class="light">Хорошо</label>
        <input type="radio" id="excellent_eng" value="excellent" name="english_knowledge"> <label for="excellent_eng" class="light">Превосходно</label>
-    </p>
-        <p class=key_skills ><b>Ключевые навыки:</b>
+        <div class=key_skills ><b>Ключевые навыки:</b>
             <ul>
                 <li>HTML</li>
                 <li>CSS/LESS</li>
                 <li>Javascript</li>
             </ul>
-           <span> <input class="line_form" type="text" id="skills" name="skills" placeholder="Введите навык"> <button>Добавить в список</button></span>
-        </p>
-        <p>
-            <label class="h2"><b>Коммуникабельность:</b></label>
+           <span> <input class="line_form" type="text" id="skills" name="skills" placeholder="Введите навык"> <button>Добавить в список</button></span></div>
+           <div class="social"> <label class="h2"><b>Коммуникабельность:</b></label>
             <select class="line_form" id="sociability" name="person's_sociability">
                 <option value="" selected disabled hidden>Выберите значение</option>
                 <option value="very_sociability">Очень коммуникабелен и всегда готов к общению и обсуждению</option>
                 <option value="middle_sociability">Всегда общаюсь только по делу</option>
                 <option value="0_sociability">Кто все эти люди??? Уберите их от меня!!!</option>
             </select>
-        </p>
-    <span>
-        <label class="h2"><b>Желаемая зарплата (руб.):</b></label>
-            <input class="salary_form" type="number" id="salary" name="salary" placeholder="Введите значение..." min="0" max="200000" step="1000">
-
-    </span>
+            </div>
+    <span><label class="h2"><b>Желаемая зарплата (руб.):</b></label>
+            <input class="salary_form" type="number" id="salary" name="salary" placeholder="Введите значение..." min="0" max="200000" step="1000"></span>
 
     <p><label class="h2"><b>Подходит по критериям:</b></label></p>
     <p><input type="checkbox" class="crit" id="english" value="english_knowledge" name="person_knowledge" ><label class="light" for="english">Знание английского</label>
