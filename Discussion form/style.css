@@ -60,15 +60,15 @@ h1{
     overflow: auto;
 }
 
-.main__massage{
+.main__block{
 display:flex;
 flex-direction:row;
 justify-content: flex-start;
 }
-.main__massage_box_one, .main__massage_name_and_text{
+.block-main__datebox, .block-main__message{
     padding-top:10px;
 }
-.main__massage_box_one{
+.block-main__datebox{
 display: flex;
 flex-direction:row;
 justify-content:center;
@@ -76,7 +76,7 @@ align-items: center;
 width:147px;
 border-right: 3px ridge #87CEEB;
 }
-.main__massage_box_one_circle{
+.datebox-block__initial{
     width:50px;
     height:50px;
     display:block;
@@ -93,32 +93,33 @@ border-right: 3px ridge #87CEEB;
     text-shadow: 1px 1px 3px #000;
 
 }
-.main__massage_box_one_date_and_time{
+.datebox-block__date{
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items: flex-start;
 color:white;
 font-size: 12px;
+margin-right:3px;
 }
-.main__massage_box_one_date_and_time_date{
+.date-block__day{
 margin:0px;
 padding:2px;
 line-height: 1em;
 }
-.main__massage_box_one_date_and_time_time{
+.date-block__time{
 margin:0px;
 padding:2px;
 line-height: 1em;
 }
-.main__massage_name_and_text{
+.block-main__message{
 margin-left:10px;
 }
-.main__massage_name_and_text_name{
+.message-block__name{
     margin:1px 0px 2px 0px;
     font-size:14px;
 }
-.main__massage_name_and_text_text{
+.message-block__text{
     margin:7px 10px 7px 7px;
     background-color: #1E90FF;
     border:2px solid #6495ED;
