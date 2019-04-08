@@ -69,6 +69,10 @@ justify-content: flex-start;
     padding-top:10px;
 }
 .main__massage_box_one{
+display: flex;
+flex-direction:row;
+justify-content:center;
+align-items: center;
 width:147px;
 border-right: 3px ridge #87CEEB;
 }
@@ -85,24 +89,28 @@ border-right: 3px ridge #87CEEB;
     line-height:50px;
     text-align:center;
     background-color: #00BFFF;
-    float: left;
     margin:5px 5px 5px 10px;
     text-shadow: 1px 1px 3px #000;
 
 }
-.main__massage_box_one_date_and_time_date{
-margin:18px 0px 0px 0px;
-line-height: 1em;
+.main__massage_box_one_date_and_time{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items: flex-start;
 color:white;
 font-size: 12px;
 }
-.main__massage_box_one_date_and_time_time{
-    margin:1px 0px 0px 0px;
-    line-height: 1em;
-    font-size: 12px;
+.main__massage_box_one_date_and_time_date{
+margin:0px;
+padding:2px;
+line-height: 1em;
 }
-
-
+.main__massage_box_one_date_and_time_time{
+margin:0px;
+padding:2px;
+line-height: 1em;
+}
 .main__massage_name_and_text{
 margin-left:10px;
 }
@@ -111,8 +119,7 @@ margin-left:10px;
     font-size:14px;
 }
 .main__massage_name_and_text_text{
-    width:580px;
-    margin-top:2px;
+    margin:7px 10px 7px 7px;
     background-color: #1E90FF;
     border:2px solid #6495ED;
     border-radius: 5px;
