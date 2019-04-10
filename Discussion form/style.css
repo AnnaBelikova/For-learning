@@ -73,7 +73,8 @@ display: flex;
 flex-direction:row;
 justify-content:center;
 align-items: center;
-width:147px;
+min-width:-moz-min-content;
+min-width:147px;
 border-right: 3px ridge #87CEEB;
 }
 .datebox-block__initial{
@@ -98,6 +99,11 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items: flex-start;
+box-sizing:border-box;
+flex-grow: 0;
+flex-shrink: 0;
+flex-basis: 0%;
+
 color:white;
 font-size: 12px;
 margin-right:3px;
@@ -114,6 +120,7 @@ line-height: 1em;
 }
 .block-main__message{
 margin-left:10px;
+
 }
 .message-block__name{
     margin:1px 0px 2px 0px;
