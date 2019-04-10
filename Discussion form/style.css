@@ -52,11 +52,12 @@ h1{
 }
 
 .main{
+    box-sizing: border-box;
     display:flex;
     flex-direction: column;
     align-content:space-between;
     width: 785px;
-    height:500px;
+    max-height:500px;
     overflow: auto;
 }
 
@@ -69,12 +70,14 @@ justify-content: flex-start;
     padding-top:10px;
 }
 .block-main__datebox{
+box-sizing: border-box;
 display: flex;
 flex-direction:row;
+-ms-flex-pack: center;
 justify-content:center;
 align-items: center;
 min-width:-moz-min-content;
-min-width:147px;
+min-width:150px;
 border-right: 3px ridge #87CEEB;
 }
 .datebox-block__initial{
@@ -119,8 +122,8 @@ padding:2px;
 line-height: 1em;
 }
 .block-main__message{
+width:100%;
 margin-left:10px;
-
 }
 .message-block__name{
     margin:1px 0px 2px 0px;
