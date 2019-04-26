@@ -1,16 +1,17 @@
 function deepEqual(a,b){
     let result=true;
     if(typeof(a)!='object' && typeof(b)!='object'){
-        if (a===b){
-            result=true;
-        }
-        else{
-            result=false;
-        }
+        result = ( a === b ) ? true : false;
     }
-    else if(a==null && b==null){
-        result=true;
+    
+    else if(null!=undefined && a === null && b === null ){
+        result = true;
     }
+
+    else if (a===null && b===undefined || a===undefined && b===null){
+        result = false;
+    }
+    
     else if(a == null && b!=null || b == null && a!=null){
         result=false;
     }
@@ -19,14 +20,13 @@ function deepEqual(a,b){
             result=false;
         }
         else{
-            let temp=true;
             for(let prop in a ){
-                temp =b.hasOwnProperty(prop) && temp;
-                if(temp){
-                    temp=temp && (deepEqual(a[prop],b[prop]));
+                if(!deepEqual(a[prop],b[prop])) {
+                    result = false;
+                    break;
                 }
+                result=true;
             }
-            result=temp;
         }
     }
     return result;
@@ -34,13 +34,15 @@ function deepEqual(a,b){
 
 
 
-let a= new Object();
+/*let a= new Object();
 a.name='Derek';
 a.age=67;
 a.education='elementary';
 let b= new Object();
 b.name='Derek';
-b.age=68;
-b.education='elementary';
+b.age=67;
+b.education='elementary';*/
+let a = null;
+let b = undefined;
 
 console.log(deepEqual(a,b));

@@ -1,19 +1,22 @@
-function ArrayToList(a){
-  let head= new Node(a[0]);
-  for (let i=1; i<a.length; i++){
-    AddNodeToList(a[i],head);
+function arrayToList(a){
+  let head= new node(a[a.length-1]);
+  for (let i=a.length-2; i>=0; i--){
+   // head = prepend (a[i],head);
+   let newNode= new node (a[i]);
+   newNode.next=head;
+   head = newNode;
   }
   return head;
 }
 
 
-function Node(b){
+function node(b){
   this.value=b;
   this.next=null;
 }
 
-function AddNodeToList(value,head){
-  let addedNode= new Node(value);
+function addNodeToList(value,head){
+  let addedNode= new node(value);
   let currentNode=head;
   while(currentNode.next){
     currentNode=currentNode.next;
@@ -21,7 +24,7 @@ function AddNodeToList(value,head){
   currentNode.next=addedNode;
 }
 
-function ListToArray(list){
+function listToArray(list){
   let currentNode=list;
   let result=[];
   while(currentNode){
@@ -32,14 +35,15 @@ function ListToArray(list){
 }
 
 function prepend(value,head){
-  let newHead= new Node(value);
+  let newHead= new node(value);
   let currentNode=head;
   while(currentNode){
-    AddNodeToList(currentNode.value,newHead);
+    addNodeToList(currentNode.value,newHead);
     currentNode=currentNode.next;
   }
   return newHead;
 }
+
 function nth(list,order_number){
   let result='';
   let order=0;
@@ -74,13 +78,10 @@ function nthRec(list,order_number){
 
 
 let a=[1,2,3];
-console.log(ArrayToList(a));
-let list=ArrayToList(a);
-console.log(ListToArray(list));
-console.log(prepend(5,list))
-console.log(nth(list,2));
+console.log(arrayToList(a));
+
+let list=arrayToList(a);
+console.log(listToArray(list));
+console.log(prepend(5,list));
+console.log(nth(list,1));
 console.log(nthRec(list,2));
-
-
-
-

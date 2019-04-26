@@ -1,16 +1,16 @@
-function isEven(n){
-    let result=true;
-    if(n<0){
-        n=-n;
+function isEven (n){
+    let result = true;
+    if ( n < 0 ){
+        n = -n;
     }
-    if(n==0){
-        result=true;
+    if ( n === 0 ){
+        result = true;
     }
-    else if(n==1){
+    else if ( n === 1 ){
         result=false;
     }
     else{
-        result=isEven(n-2);
+        result = isEven (n-2);
     }
     return (result);
 }

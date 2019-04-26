@@ -1,7 +1,7 @@
 function reverseArray(a){
     let b=[];
-    for(let i=a.length-1; i>=0; i--) {
-        b[i]=a[a.length-i-1];
+    for(let i=0; i<a.length; i++) {
+        b.push (a[a.length-i-1]);
     };
     return (b);
 }
