@@ -356,6 +356,7 @@ template {
 
 .poppins-regular, .poppins-medium {
   font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .poppins-medium {
@@ -422,7 +423,7 @@ header .search-controls {
 
 /*Начало первого экрана*/
 .first-screen {
-  height: 1080px;
+  height: 100vh;
   position: relative;
 }
 
@@ -583,21 +584,26 @@ header .search-controls {
 
 /*Начало второго экрана*/
 .second-screen {
-  height: 948px;
-  width: 82%;
+  height: 100vh;
+  width: 82vw;
+  max-width: 1800px;
   position: relative;
   margin: 0;
   padding: 120px;
   -webkit-box-sizing: padding-box;
           box-sizing: padding-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .second-screen .person-photo {
-  position: absolute;
-  height: 80%;
-  width: 35%;
+  height: 100vh;
+  width: 35vw;
   background-color: #e2e8e8;
-  left: 170px;
 }
 
 .second-screen .person-photo .photo-points {
@@ -633,15 +639,13 @@ header .search-controls {
 }
 
 .second-screen .profile {
-  margin: 0 0 0 auto;
-  width: 43%;
+  width: 40%;
 }
 
 .second-screen .profile .menu-profile {
-  width: 60%;
+  width: 70%;
   padding-top: 91px;
   padding-right: 20px;
-  margin: 0 auto 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,8 +676,8 @@ header .search-controls {
   height: 2px;
   background-color: #1a1a1d;
   display: inline-block;
-  left: -26px;
-  top: 29px;
+  left: -40%;
+  bottom: -19px;
 }
 
 .second-screen .profile .info-profile {
@@ -682,10 +686,9 @@ header .search-controls {
 
 .second-screen .profile .title-profile {
   font-size: 60px;
-  margin: 0;
   color: #1a1a1d;
-  padding-top: 130px;
-  padding-bottom: 38px;
+  margin-top: 130px;
+  margin-bottom: 38px;
   line-height: 1;
 }
 
@@ -716,9 +719,8 @@ header .search-controls {
 .second-screen .social-networks {
   width: 16px;
   position: absolute;
-  top: 50%;
-  margin-top: -97px;
-  right: 0;
+  top: 40%;
+  right: 0px;
 }
 
 .second-screen .social-networks .social-button {
@@ -731,25 +733,32 @@ header .search-controls {
 
 /*Третий экран */
 .third-screen {
-  height: 1080px;
-  position: relative;
+  height: 150vh;
+  max-height: 1080px;
+  width: 85vw;
+  max-width: 1800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 
 .third-screen .news-photo {
-  width: 42%;
+  width: 40vw;
   height: 100%;
-  right: 120px;
-  top: 0;
-  padding: 0;
-  position: absolute;
   background-color: #e2e8e8;
+  margin-left: 120px;
 }
 
 .on-press {
-  position: absolute;
-  height: 100%;
-  width: 32%;
-  left: 241px;
+  width: 35%;
+  height: 40vh;
+  margin-top: 0;
+  margin-left: 120px;
 }
 
 .title-news {
@@ -768,61 +777,40 @@ header .search-controls {
   background-color: #1a1a1d;
 }
 
-.first-video {
+.video {
   margin-top: 80px;
   width: 100%;
   height: 100%;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-.video-rectangle-one {
-  display: inline-block;
+.video:hover .video-rectangle {
+  background-color: #b4d3d3;
+}
+
+.video:hover .video-rectangle i {
+  display: block;
+}
+
+.video:hover .video-title {
+  color: #b4d3d3;
+}
+
+.video-rectangle {
   width: 200px;
   height: 139px;
   background-color: #e2e8e8;
   margin: 0;
-}
-
-.title-date-one {
-  position: absolute;
-  display: inline-block;
-  margin-left: 30px;
-  margin-top: -10px;
-  margin-right: 0;
-  padding-top: 0;
-}
-
-.first-video-title {
-  font-size: 24px;
-  line-height: 1.5;
-  color: #1a1a1d;
-  padding: 0;
-  margin: 0;
-}
-
-.first-video-date {
-  font-size: 16px;
-  color: #77777e;
-  line-height: 2.5;
-}
-
-.second-video {
-  margin-top: 80px;
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
-.video-rectangle-two {
-  display: inline-block;
-  width: 200px;
-  height: 139px;
-  background-color: #b4d3d3;
-  margin: 0;
-  position: relative;
-}
-
-.video-rectangle-two i {
+.video-rectangle i {
+  display: none;
   position: absolute;
   font-size: 30px;
   left: 45%;
@@ -830,27 +818,36 @@ header .search-controls {
   color: white;
 }
 
-.title-date-two {
-  position: absolute;
-  display: inline-block;
+.title-date {
+  width: 50%;
   margin-left: 30px;
   margin-top: -10px;
   margin-right: 0;
-  padding-top: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.second-video-title {
+.video-title {
   font-size: 24px;
   line-height: 1.5;
-  color: #87bbbc;
+  color: #1a1a1d;
   padding: 0;
   margin: 0;
 }
 
-.second-video-date {
+.video-date {
   font-size: 16px;
   color: #77777e;
-  line-height: 2.5;
+  margin: 0;
 }
 
 .explore-more {
@@ -875,25 +872,22 @@ header .search-controls {
 
 /*Начало четвертого экрана*/
 .fourth-screen {
-  height: 760px;
+  height: 100vh;
   position: relative;
+  padding: 120px;
+}
+
+.fourth-screen .head-fourth {
+  width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 120px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.fourth-screen .head-fourth {
-  width: 35%;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-}
-
 .fourth-screen .title-fourth {
-  display: inline-block;
   margin-right: 0px;
   padding: 0;
 }
@@ -918,9 +912,7 @@ header .search-controls {
 }
 
 .fourth-screen .short-text {
-  display: inline-block;
   width: 30%;
-  position: absolute;
   left: 57%;
 }
 
@@ -951,54 +943,38 @@ header .search-controls {
 }
 
 .fourth-screen .fourth-screen__gallery {
-  margin-top: 10%;
-  margin-left: 0;
-  margin-right: 0;
-  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  width: 1680px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0px;
+  margin-top: 130px;
+  margin-bottom: 70px;
 }
 
 .fourth-screen .fourth-screen__gallery .gallery__photo {
-  height: 100%;
-  margin-bottom: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo {
-  width: 420px;
-  height: 490px;
-}
-
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-first {
-  background-color: #d3dcdc;
-}
-
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-second {
   background-color: #e2e8e8;
-}
-
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-third {
-  background-color: #d3dcdc;
+  height: 490px;
+  background-position: center;
+  background-size: auto 100%;
   position: relative;
-  /*.photo-third:hover .dark-screen{
-        display: block;
-        cursor: pointer;
-    }*/
 }
 
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-third .dark-screen {
-  position: absolute;
-  background-color: black;
-  opacity: 0.8;
-  text-align: center;
+.fourth-screen .fourth-screen__gallery .gallery__photo:hover .dark-screen {
   display: block;
 }
 
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-third .dark-screen .text {
+.fourth-screen .fourth-screen__gallery .dark-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 4, 9, 0.81);
+  text-align: center;
+  display: none;
+}
+
+.fourth-screen .fourth-screen__gallery .dark-screen .text {
   position: absolute;
   bottom: 51px;
   right: 100px;
@@ -1006,19 +982,19 @@ header .search-controls {
   padding: 0;
 }
 
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-third .dark-screen .text .name {
+.fourth-screen .fourth-screen__gallery .dark-screen .text .name {
   font-size: 30px;
   letter-spacing: 0.6px;
   color: #ffffff;
 }
 
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-third .dark-screen .text .job {
+.fourth-screen .fourth-screen__gallery .dark-screen .text .job {
   font-size: 12px;
   letter-spacing: 2.4px;
   color: #ffffff;
 }
 
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-third .dark-screen .arrow-button {
+.fourth-screen .fourth-screen__gallery .dark-screen .arrow-button {
   width: 56px;
   height: 56px;
   background-color: #b4d3d3;
@@ -1039,18 +1015,14 @@ header .search-controls {
   color: #ffffff;
 }
 
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-third .dark-screen .arrow-button i {
+.fourth-screen .fourth-screen__gallery .dark-screen .arrow-button i {
   position: relative;
   left: 0px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.fourth-screen .fourth-screen__gallery .gallery__photo .photo-fourth {
-  background-color: #e2e8e8;
-}
-
-.fourth-screen .fourth-screen__gallery .points-gallery {
+.fourth-screen .points-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1062,7 +1034,7 @@ header .search-controls {
           align-items: center;
 }
 
-.fourth-screen .fourth-screen__gallery .points-gallery__point {
+.fourth-screen .points-gallery__point {
   margin: 20px;
   width: 6px;
   height: 6px;
@@ -1072,7 +1044,7 @@ header .search-controls {
   z-index: 10;
 }
 
-.fourth-screen .fourth-screen__gallery .points-gallery__point.active {
+.fourth-screen .points-gallery__point.active {
   width: 12px;
   height: 12px;
   opacity: 1;
@@ -1087,10 +1059,15 @@ header .search-controls {
   margin-left: 60px;
   margin-right: 60px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer .left-part {
-  position: absolute;
   left: 0px;
 }
 
@@ -1107,7 +1084,6 @@ header .search-controls {
 }
 
 .footer .right-part {
-  position: absolute;
   right: 0px;
 }
 

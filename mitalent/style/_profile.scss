@@ -1,6 +1,6 @@
 /*Начало первого экрана*/
 .first-screen {
-    height: 1080px;
+    height: 100vh;
     position: relative;
     .rectangle-with-bg {
         width: 481px;
@@ -143,18 +143,19 @@ margin:0;
 
 /*Начало второго экрана*/
 .second-screen {
-    height:948px;
-    width: 82%;
+    height:100vh;
+    width: 82vw;
+    max-width: 1800px;
     position: relative;
     margin:0;
     padding: 120px;
     box-sizing:padding-box;
+    display:flex;
+    justify-content: space-between;
     .person-photo {
-        position:absolute;
-        height:80%;
-        width: 35%;
+        height:100vh;
+        width: 35vw;
         background-color: #e2e8e8;
-        left:170px;
 
         .photo-points{
             height:100%;
@@ -181,14 +182,12 @@ margin:0;
         }
     }
     .profile {
-            margin: 0 0 0 auto;
-            width:43%;
+            width:40%;
 
         .menu-profile{
-            width:60%;
+            width:70%;
             padding-top:91px;
             padding-right:20px;
-            margin:0 auto 0 0;
             display:flex;
             justify-content:space-between;
             letter-spacing:2.4px;
@@ -211,8 +210,8 @@ margin:0;
                 height: 2px;
                 background-color: $primary-color;
                 display: inline-block;
-                left: -26px;
-                top: 29px;
+                left:-40%;
+                bottom: -19px;
                 }
             }
 
@@ -222,10 +221,9 @@ margin:0;
         }
         .title-profile{
             font-size:60px;
-            margin:0;
             color: $primary-color;
-            padding-top:130px;
-            padding-bottom:38px;
+            margin-top:130px;
+            margin-bottom:38px;
             line-height: 1;
         }
         .short-info{
@@ -253,9 +251,8 @@ margin:0;
     .social-networks{
         width:16px;
         position: absolute;
-        top:50%;
-        margin-top:-97px;
-        right:0;
+        top:40%;
+        right:0px;
 
         .social-button{
             margin-top:40px;
@@ -268,24 +265,27 @@ margin:0;
 /*Третий экран */
 
 .third-screen{
-height:1080px;
-position: relative;
-
-    .news-photo{
-    width:42%;
+height:150vh;
+max-height:1080px;
+width: 85vw;
+max-width: 1800px;
+display:flex;
+justify-content: space-between;
+margin-left:120px;
+margin-right:120px;
+    
+.news-photo{
+    width:40vw;
     height:100%;
-    right:120px;
-    top:0;
-    padding:0;
-    position:absolute;
     background-color: #e2e8e8;
+    margin-left:120px;
     }
 }
 .on-press{
-    position:absolute;
-    height:100%;
-    width:32%;
-    left:241px;
+    width:35%;
+    height:40vh;
+    margin-top:0;
+    margin-left:120px;
     }
 
 .title-news{
@@ -302,83 +302,63 @@ position: relative;
         margin-top:49px;
         background-color:$primary-color;
     }
- .first-video{
+ .video{
         margin-top:80px;
         width:100%;
         height:100%;
-        position: relative;
+        display:flex;
+        justify-content: flex-start;
+        &:hover  .video-rectangle{
+            background-color:#b4d3d3;
+            i{
+                display:block;
+            }
+        }
+        &:hover .video-title{
+            color:#b4d3d3;
+        }
 }
-.video-rectangle-one{
-            display:inline-block;
+.video-rectangle{
             width:200px;
             height:139px;
             background-color:#e2e8e8;
             margin:0;
+            position:relative;
+            i{
+                display:none;
+                position: absolute;
+                font-size: 30px;
+                left:45%;
+                top:40%;
+                color:white;
+            }
         }
-.title-date-one{
-            position:absolute;
-            display:inline-block;
+.title-date{
+            width:50%;
             margin-left:30px;
             margin-top:-10px;
             margin-right:0;
-            padding-top:0;
+            padding:0;
+            display:flex;
+            flex-direction: column;
+            justify-content:space-between;
 }
-.first-video-title{
+.video-title{
             font-size: 24px;
             line-height: 1.5;
             color:$primary-color;
             padding:0;
             margin:0;
         }
-.first-video-date{
+.video-date{
     font-size: 16px;
     color: #77777e;
-    line-height: 2.5;
+    margin:0;
 }
 
 
 
-.second-video{
-        margin-top:80px;
-        width:100%;
-        height:100%;
-        position: relative;
-}
-.video-rectangle-two{
-            display:inline-block;
-            width:200px;
-            height:139px;
-            background-color:#b4d3d3;
-            margin:0;
-            position: relative;
-            i{
-            position: absolute;
-            font-size: 30px;
-            left:45%;
-            top:40%;
-            color:white;
-            }
-        }
-.title-date-two{
-            position:absolute;
-            display:inline-block;
-            margin-left:30px;
-            margin-top:-10px;
-            margin-right:0;
-            padding-top:0;
-}
-.second-video-title{
-            font-size: 24px;
-            line-height: 1.5;
-            color:#87bbbc;
-            padding:0;
-            margin:0;
-        }
-.second-video-date{
-    font-size: 16px;
-    color: #77777e;
-    line-height: 2.5;
-}
+
 .explore-more{
     margin-top:63px;
     position: relative;
@@ -401,19 +381,17 @@ position: relative;
 /*Начало четвертого экрана*/
 
 .fourth-screen {
-height:760px;
+height:100vh;
 position: relative;
-display: flex;
 padding:120px;
-justify-content:space-between;
 
     .head-fourth{
-        width:35%;
-        margin:0px 0px 0px 0px;
-        padding:0px 0px 0px 0px;
+        width:80vw;
+        display: flex;
+        justify-content: space-between;
     }
+    
     .title-fourth{
-            display: inline-block;
             margin-right:0px;
             padding:0;
         }
@@ -435,9 +413,7 @@ justify-content:space-between;
         margin-left:120px;
     }
     .short-text{
-    display: inline-block;
     width:30%;
-    position:absolute;
     left:57%;
     }
 
@@ -466,86 +442,72 @@ justify-content:space-between;
 }
 
     .fourth-screen__gallery {
-        margin-top:10%;
-        margin-left:0;
-        margin-right:0;
-        position:absolute;
+        display: grid;
+        width: 1680px;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        gap: 0px;
+        margin-top:130px;
+        margin-bottom: 70px;
 
-    .gallery__photo{
-        height: 100%;
-        margin-bottom:50px;
-        display:flex;
-        justify-content:flex-start;
-        .photo{
-            width: 420px;
+        .gallery__photo {
+            background-color:#e2e8e8;
             height: 490px;
+            background-position: center;
+            background-size: auto 100%;
+            position: relative;
+            &:hover .dark-screen {
+                display: block;
+            }
         }
-
-        .photo-first{
-        background-color: #d3dcdc;
-        }
-        .photo-second{
-        background-color: #e2e8e8;
-        }
-        .photo-third{
-        background-color: #d3dcdc;
-        position: relative;
 
             .dark-screen{
-            position:absolute;
-            background-color: black;
-            opacity:0.8;
+            position:relative;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(3, 4, 9, 0.81);
             text-align: center;
-            display: block;
-            .text{
-                position:absolute;
-                bottom:51px;
-                right:100px;
-                left:100px;
-                padding:0;
+            display: none;
+                .text{
+                    position:absolute;
+                    bottom:51px;
+                    right:100px;
+                    left:100px;
+                    padding:0;
 
-            .name{
+                .name{
 
-                font-size:30px;
-                letter-spacing: 0.6px;
-                color:#ffffff;
+                    font-size:30px;
+                    letter-spacing: 0.6px;
+                    color:#ffffff;
+                }
+                .job{
+                    font-size: 12px;
+                    letter-spacing: 2.4px;
+                    color:#ffffff;
+                }
+                }
+                .arrow-button{
+                    width:56px;
+                    height: 56px;
+                    background-color: #b4d3d3;
+                    top:20px;
+                    right:20px;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    color: #ffffff;
+                    i{
+                        position:relative;
+                        left:0px;
+                        transform: rotate(-45deg);
+                    }
+                }
             }
-            .job{
-                font-size: 12px;
-                letter-spacing: 2.4px;
-                color:#ffffff;
-            }
-            }
-        .arrow-button{
-            width:56px;
-            height: 56px;
-            background-color: #b4d3d3;
-            top:20px;
-            right:20px;
-            border-radius: 50%;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            color: #ffffff;
-            i{
-                position:relative;
-                left:0px;
-                transform: rotate(-45deg);
-            }
+
         }
-
-    }
-    /*.photo-third:hover .dark-screen{
-        display: block;
-        cursor: pointer;
-    }*/
-    }
-        .photo-fourth{
-        background-color: #e2e8e8;
-        }
-    }
     .points-gallery{
         display: flex;
         justify-content: center;
@@ -569,7 +531,6 @@ justify-content:space-between;
         }
     }
     }
-}
 
 /*Контакты*/
 .footer{
@@ -577,8 +538,9 @@ justify-content:space-between;
     margin-left:60px;
     margin-right:60px;
     position:relative;
+    display: flex;
+    justify-content: space-between;
         .left-part{
-            position:absolute;
             left:0px;
             .left-part__logo{
                 font-size: 28px;
@@ -593,7 +555,6 @@ justify-content:space-between;
         }
 
         .right-part{
-            position:absolute;
             right:0px;
             .block_send{
                 display:flex;
