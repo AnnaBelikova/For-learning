@@ -35,13 +35,25 @@ header {
     }
     .left-controls {
       margin-left:61px;
+      @media (max-width: 480px){
+        margin-left:20px;
+            .left-controls__link{    
+                display:none;
+            }
+        }
     }
     .clients-link {
         margin-left: 46px;
         margin-right: 53px;
+        @media (max-width: 480px){
+            display:none;
+        }
     }
     .search-controls {
         margin-right: 66px;
+        @media (max-width: 480px){
+            display:none;
+        }
     }
 }
 

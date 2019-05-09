@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,800|Poppins:400,500" rel="stylesheet">
     <link rel="stylesheet" href="./style/site.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="max-width: 1920px;">
     <header class="flex-container">
         <div class="flex-container__controls-left left-controls">
             <button class=" left-controls__button-icon icon-button"><i class="fas fa-bars"></i></button>
@@ -31,15 +32,15 @@
                 <div class="slider-meta__controls slider-controls">
                     <div class="slider-controls__pages slider-pages nunito-extrabold">
                         <ul class="slider-controls__pages slider-pages nunito-extrabold">
-                            <li class="slider-pages__page slider-page">01</li>
-                            <li class="slider-pages__page slider-page active">02</li>
+                            <li class="slider-pages__page slider-page active">01</li>
+                            <li class="slider-pages__page slider-page">02</li>
                             <li class="slider-pages__page slider-page">03</li>
                             <li class="slider-pages__page slider-page">04</li>
                         </ul>
                     </div>
-                    <div class="slider-controls__arrows slider-arrows">
-                        <i class="slider-arrows__left fas fa-long-arrow-left" ></i>
-                        <i class="slider-arrows__right fas fa-long-arrow-right" disabled></i>
+                    <div class="slider-arrows">
+                            <i class="fas fa-long-arrow-alt-left slider-left-arrow" onclick="doSlide(-1)"></i>
+                            <i class="fas fa-long-arrow-alt-right slider-right-arrow" onclick="doSlide(1)"></i>
                     </div>
                 </div>
             </div>
@@ -61,6 +62,7 @@
                 <div class="photo-points__point"></div>
                 <div class="photo-points__point"></div>
             </div>
+            <div class="person-photo__image image"></div>
         </div>
         <div class="second-screen__profile profile">
             <div class="profile__menu menu-profile nunito-extrabold">
@@ -236,6 +238,7 @@
             </div>
     </div>
     </footer>
+    <script src="site.js"></script>
 </body>
 
 </html>
