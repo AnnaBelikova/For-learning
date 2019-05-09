@@ -1210,7 +1210,7 @@ header .search-controls {
 .title-date {
   margin-left: 30px;
   margin-top: -10px;
-  margin-right: 0;
+  margin-right: 10%;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1448,7 +1448,7 @@ header .search-controls {
 
 .fourth-screen .fourth-screen__gallery .gallery__photo {
   background-color: #e2e8e8;
-  height: 45vh;
+  height: 50vh;
   max-height: 490px;
   background-position: center;
   background-size: auto 100%;
