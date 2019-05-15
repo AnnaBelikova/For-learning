@@ -822,7 +822,7 @@ header .search-controls {
   height: 12px;
   opacity: 1;
   border-radius: 6px;
-  margin: 0 20px 27px 20px;
+  margin: 0 17px 27px 17px;
 }
 
 .second-screen .profile {
@@ -1419,6 +1419,7 @@ header .search-controls {
   display: grid;
   width: 87,5vw;
   max-width: 1680px;
+  grid-auto-flow: column;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 0px;
@@ -1567,7 +1568,8 @@ header .search-controls {
   height: 12px;
   opacity: 1;
   border-radius: 6px;
-  margin: 13px;
+  margin-left: 17px;
+  margin-right: 17px;
   background-color: #b4d3d3;
 }
 
