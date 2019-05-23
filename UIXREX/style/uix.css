@@ -412,6 +412,7 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 50px;
+  margin-left: 45px;
 }
 
 .header_two .main_info_menu .logo {
@@ -436,6 +437,11 @@ html {
   line-height: 1.8;
   text-align: right;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.header_two .main_info_menu .menu span:hover {
+  color: #22233a;
 }
 
 .header_two .main_info_menu .try {
@@ -445,13 +451,26 @@ html {
 }
 
 .header_two .main_info_menu .try button {
+  border: none;
+  outline: none;
   width: 242px;
   height: 76px;
   border-radius: 38px;
   background-color: #ffffff;
   margin-left: 85px;
   color: #4085f6;
-  border: none;
+  cursor: pointer;
+}
+
+.header_two .main_info_menu .try button:hover {
+  -webkit-box-shadow: 2.1px 5.6px 9px 1px rgba(253, 251, 251, 0.5);
+          box-shadow: 2.1px 5.6px 9px 1px rgba(253, 251, 251, 0.5);
+}
+
+.header_two .main_info_menu .try button:active {
+  outline: none;
+  background-color: #4085f6;
+  color: #ffffff;
 }
 
 .slider {
@@ -514,10 +533,22 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 .slider .slider_content .slider_text_information .slider_get_from .store:last-child {
   margin-right: 0px;
+}
+
+.slider .slider_content .slider_text_information .slider_get_from .store:hover {
+  -webkit-box-shadow: 2.1px 5.6px 9px 1px rgba(253, 251, 251, 0.5);
+          box-shadow: 2.1px 5.6px 9px 1px rgba(253, 251, 251, 0.5);
+}
+
+.slider .slider_content .slider_text_information .slider_get_from .store:active {
+  -webkit-box-shadow: 2.1px 5.6px 9px 1px rgba(22, 22, 22, 0.8);
+          box-shadow: 2.1px 5.6px 9px 1px rgba(22, 22, 22, 0.8);
+  background-color: #226be2;
 }
 
 .slider .slider_content .slider_text_information .slider_get_from .store i {
@@ -915,7 +946,7 @@ html {
   grid-auto-flow: column;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 24px;
+  gap: 27px;
   margin-bottom: 50px;
 }
 
@@ -950,6 +981,18 @@ html {
   background-color: #4085f6;
   position: relative;
   cursor: pointer;
+}
+
+.app_screenshots .app_screenshots__slider-buttons .slider-buttons:hover {
+  background-color: #1760d7;
+  -webkit-box-shadow: 1.7px 4.7px 7.8px 0.2px rgba(58, 58, 58, 0.5);
+          box-shadow: 1.7px 4.7px 7.8px 0.2px rgba(58, 58, 58, 0.5);
+}
+
+.app_screenshots .app_screenshots__slider-buttons .slider-buttons:active {
+  background-color: #13253b;
+  -webkit-box-shadow: 1.7px 4.7px 7.8px 0.2px rgba(58, 58, 58, 0.9);
+          box-shadow: 1.7px 4.7px 7.8px 0.2px rgba(58, 58, 58, 0.9);
 }
 
 .app_screenshots .app_screenshots__slider-buttons .slider-buttons i {

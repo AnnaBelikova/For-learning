@@ -19,6 +19,7 @@
     display:flex;
     justify-content: center;
     margin-bottom:50px;
+    margin-left:45px;
     .logo{
         font-size: 33.5px;
         text-align: right;
@@ -38,6 +39,10 @@
             line-height: 1.8;
             text-align: right;
             color: #ffffff;
+            cursor: pointer;
+            &:hover{
+                color: #22233a;
+            }
 
         }
     }
@@ -46,13 +51,23 @@
         line-height: 1.49;
         text-align: center;
         button{
+            border:none;
+            outline:none;
             width: 242px;
             height: 76px;
             border-radius: 38px;
             background-color: #ffffff;
             margin-left:85px;
             color: #4085f6;
-            border:none;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 2.1px 5.6px 9px 1px rgba(253, 251, 251, 0.5);
+            }
+            &:active{
+                outline:none;
+                background-color: #4085f6;
+                color: #ffffff;
+            }
             }
     }
     }
@@ -96,8 +111,16 @@
                 margin-right:18px;
                 display:flex;
                 justify-content: center;
+                cursor: pointer;
                 &:last-child{
                     margin-right:0px;
+                }
+                &:hover{
+                    box-shadow: 2.1px 5.6px 9px 1px rgba(253, 251, 251, 0.5);
+                }
+                &:active{
+                    box-shadow: 2.1px 5.6px 9px 1px rgba(22, 22, 22, 0.8);
+                    background-color: #226be2;
                 }
             i{
                 text-align: center;
@@ -431,7 +454,7 @@
         width:100vw;
         grid-auto-flow:column;
         grid-template-columns:1fr 1fr 1fr 1fr 1fr;
-        gap: 24px;
+        gap: 27px;
         margin-bottom:50px;
         .gallery-item{
             background-color:#4085f6;
@@ -457,6 +480,14 @@
             background-color: #4085f6;
             position:relative;
             cursor: pointer;
+            &:hover{
+                background-color: #1760d7;
+                box-shadow: 1.7px 4.7px 7.8px 0.2px rgba(58, 58, 58, 0.5);
+            }
+            &:active{
+                background-color: #13253b;
+                box-shadow: 1.7px 4.7px 7.8px 0.2px rgba(58, 58, 58, 0.9);
+            }
             i{
                 position:absolute;
                 font-size:30px;
