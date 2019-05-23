@@ -1,0 +1,37 @@
+.raleway-regular {
+    font-family: 'Raleway', sans-serif;
+}
+.raleway-semibold {
+    @extend .raleway-regular;
+    font-weight: 600;
+}
+.montserrat-regular {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.montserrat-medium {
+   @extend .montserrat-regular;
+    font-weight: 500;
+}
+.montserrat-semibold {
+    @extend .montserrat-regular;
+     font-weight: 600;
+ }
+ 
+
+.poppins-regular {
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+}
+.poppins-medium {
+    @extend .poppins-regular;
+    font-weight: 500;
+}
+.poppins-light {
+    @extend .poppins-regular;
+    font-weight: 300;
+}
+.poppins-semibold {
+    @extend .poppins-regular;
+    font-weight: 600;
+}
