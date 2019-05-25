@@ -372,6 +372,12 @@ template {
           align-items: center;
 }
 
+@media (max-width: 480px) {
+  .flex-container {
+    width: 100vw;
+  }
+}
+
 .link-font {
   font-size: 14px;
   color: #1a1a1d;
@@ -382,11 +388,67 @@ template {
   color: rgba(26, 26, 29, 0.5);
 }
 
+.menu__icon {
+  display: inline-block;
+  margin-left: 10px;
+  color: #ffffff;
+  position: absolute;
+  cursor: pointer;
+  text-align: left;
+  margin-top: auto;
+  margin-top: auto;
+}
+
+.menu__links-item {
+  display: none;
+  color: #333333;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu__links-item:hover {
+  text-decoration: underline;
+}
+
+.menu.menu_state_open .menu__links {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .menu__icon {
+    display: inline-block;
+    position: relative;
+  }
+  .menu__links {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(180, 211, 211, 0.8);
+    z-index: 1000;
+    overflow: auto;
+  }
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
 .icon-button {
   border: none;
   background-color: transparent;
   outline: unset;
   padding: 0;
+  cursor: pointer;
 }
 
 header {
@@ -451,7 +513,8 @@ header .search-controls {
 @media (max-width: 480px) {
   .first-screen {
     display: block;
-    height: 90vh;
+    height: 100vh;
+    margin-bottom: 20px;
   }
 }
 
@@ -499,10 +562,12 @@ header .search-controls {
   max-width: 480px;
   height: 100%;
   position: relative;
-  /*@media (max-width: 480px){
-    display:block;
-    height:40%;
-}*/
+}
+
+@media (max-width: 480px) {
+  .first-screen .slider-meta {
+    width: 94vw;
+  }
 }
 
 .first-screen .person-info {
@@ -563,8 +628,8 @@ header .search-controls {
 @media (max-width: 480px) {
   .slider-controls {
     display: block;
-    position: static;
-    margin-top: 40px;
+    position: absolute;
+    bottom: -120%;
     margin-left: 20px;
   }
 }
@@ -583,12 +648,12 @@ header .search-controls {
 
 @media (max-width: 480px) {
   .slider-pages {
-    position: static;
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     direction: row;
-    padding-right: 20px;
+    left: 25%;
   }
 }
 
@@ -602,6 +667,7 @@ header .search-controls {
 @media (max-width: 480px) {
   .slider-page {
     padding-right: 20px;
+    margin-top: 0px;
   }
 }
 
@@ -637,9 +703,18 @@ header .search-controls {
 
 @media (max-width: 480px) {
   .slider-arrows {
-    position: static;
+    position: absolute;
     margin-top: 10px;
     margin-bottom: 20px;
+    width: 80vw;
+    left: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-left-arrow {
+    margin-right: 70vw;
   }
 }
 
@@ -658,6 +733,13 @@ header .search-controls {
   position: relative;
 }
 
+@media (max-width: 480px) {
+  .slide-content {
+    margin-top: -20px;
+    height: 70vw;
+  }
+}
+
 .slide-content:after {
   content: '';
   width: 56px;
@@ -667,6 +749,12 @@ header .search-controls {
   left: 18%;
   top: 34%;
   display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .slide-content:after {
+    display: none;
+  }
 }
 
 .slide-content .slide-button {
@@ -786,6 +874,7 @@ header .search-controls {
   .second-screen .person-photo .image {
     display: block;
     height: 70vh;
+    margin-bottom: 20px;
   }
 }
 
@@ -831,6 +920,13 @@ header .search-controls {
   margin-right: 0;
 }
 
+@media (max-width: 480px) {
+  .second-screen .profile {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 .second-screen .profile .menu-profile {
   width: 70%;
   margin-left: 18%;
@@ -850,6 +946,10 @@ header .search-controls {
   .second-screen .profile .menu-profile {
     letter-spacing: 1px;
     width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0px;
+    padding-top: 22%;
   }
 }
 
@@ -891,6 +991,8 @@ header .search-controls {
 @media (max-width: 480px) {
   .second-screen .profile .info-profile {
     width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1025,8 +1127,15 @@ header .search-controls {
 
 @media (max-width: 480px) {
   .second-screen .social-networks {
-    top: 62%;
-    right: 20px;
+    margin-bottom: 0;
+    margin-top: -12%;
+    font-size: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100vw;
   }
 }
 
@@ -1036,12 +1145,18 @@ header .search-controls {
 
 @media (max-width: 480px) {
   .second-screen .social-networks .social-button {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 }
 
 .second-screen .social-networks .social-button:first-child {
   margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  .second-screen .social-networks .social-button:first-child {
+    margin-left: 0px;
+  }
 }
 
 /*Третий экран */
@@ -1063,7 +1178,6 @@ header .search-controls {
     display: block;
     width: 100vw;
     padding: 0;
-    margin-left: 10px;
   }
 }
 
@@ -1079,7 +1193,6 @@ header .search-controls {
     display: block;
     width: 90%;
     height: 65vh;
-    margin-left: 10px;
   }
 }
 
@@ -1110,6 +1223,8 @@ header .search-controls {
 @media (max-width: 480px) {
   .title-news {
     font-size: 45px;
+    margin-right: 0;
+    width: 80%;
   }
 }
 
