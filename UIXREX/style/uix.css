@@ -385,41 +385,41 @@ html {
 }
 
 /*Начало первого экрана*/
-.header {
+.slide_background {
   width: 100vw;
   height: 0;
   position: relative;
 }
 
 @media (max-width: 480px) {
-  .header {
+  .slide_background {
     display: none;
   }
 }
 
 @media (min-width: 800px) {
-  .header {
+  .slide_background {
     width: 800px;
   }
 }
 
 @media (min-width: 1200px) {
-  .header {
+  .slide_background {
     width: 1200px;
   }
 }
 
 @media (min-width: 1800px) {
-  .header {
+  .slide_background {
     width: 1800px;
   }
 }
 
-.header img.slider_background {
+.slide_background img.slider_background {
   z-index: -1;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
 }
 
@@ -802,6 +802,8 @@ html {
   border-radius: 70px;
   background-color: #22233a;
   margin-right: 18px;
+  padding-left: 44px;
+  padding-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,6 +816,8 @@ html {
 @media (max-width: 480px) {
   .slider .slider_content .slider_text_information .slider_get_from .store {
     border-radius: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
   }
 }
 
@@ -835,24 +839,22 @@ html {
 .slider .slider_content .slider_text_information .slider_get_from .store i {
   text-align: center;
   font-size: 40px;
-  margin-left: 44px;
+  margin-left: 0;
   margin-right: 23px;
-  margin-top: 25px;
+  margin-top: 0;
   color: #ffffff;
 }
 
 @media (max-width: 480px) {
   .slider .slider_content .slider_text_information .slider_get_from .store i {
     font-size: 30px;
-    margin-top: 10px;
-    margin-left: 20px;
     margin-right: 10px;
   }
 }
 
 .slider .slider_content .slider_text_information .slider_get_from .store .offer_to_download {
   margin-bottom: 8px;
-  margin-top: 22px;
+  margin-top: 12px;
   font-size: 13.5px;
   color: #ffffff;
 }
@@ -860,7 +862,7 @@ html {
 @media (max-width: 480px) {
   .slider .slider_content .slider_text_information .slider_get_from .store .offer_to_download {
     font-size: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 5px;
   }
 }
@@ -921,7 +923,7 @@ html {
     color: #737373;
     text-align: center;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 70%;
   }
 }
@@ -974,7 +976,6 @@ html {
   width: 19%;
   margin-left: 16px;
   margin-right: 16px;
-  margin-bottom: 37px;
   -webkit-box-shadow: 0.7px 1.9px 19.6px 0.4px rgba(34, 31, 31, 0.2);
           box-shadow: 0.7px 1.9px 19.6px 0.4px rgba(34, 31, 31, 0.2);
   background-color: #ffffff;
@@ -987,6 +988,8 @@ html {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
   }
 }
 
@@ -1035,6 +1038,7 @@ html {
   .about_the_app .about_the_app__strengths .strengths .icon {
     width: 80px;
     height: 80px;
+    margin-top: 10px;
   }
 }
 
@@ -1652,6 +1656,7 @@ html {
 
 .pricing_plan .pricing_plan__prices .offers button {
   font-size: 18px;
+  background-color: transparent;
   color: #4085f6;
   border-radius: 27px;
   border: solid 2px #226be2;
@@ -1659,8 +1664,6 @@ html {
   height: 55px;
   margin-top: 10px;
   margin-bottom: 41px;
-  margin-right: 80px;
-  margin-left: 80px;
 }
 
 @media (max-width: 480px) {
@@ -1682,6 +1685,10 @@ html {
   height: 557px;
   margin-top: -25px;
   margin-bottom: -25px;
+}
+
+.pricing_plan .pricing_plan__prices .offers:hover button {
+  background-color: #f8f6f6;
 }
 
 @media (max-width: 480px) {
@@ -1809,6 +1816,12 @@ html {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 26px;
   margin-bottom: 50px;
+  -webkit-transition: margin-left 4s ease-in-out 1s;
+  transition: margin-left 4s ease-in-out 1s;
+}
+
+.app_screenshots .gallery:hover {
+  margin-left: -200vw;
 }
 
 @media (max-width: 480px) {
@@ -1931,6 +1944,16 @@ html {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-transition: margin-left 4s ease-in-out 1s;
+  transition: margin-left 4s ease-in-out 1s;
+}
+
+.comments .comments_wrapper:hover {
+  margin-left: -100vw;
+}
+
+.comments .comments_wrapper:nth-child(2) :hover {
+  margin-left: -100vw;
 }
 
 .comments .comments_wrapper .comments_block__items {
@@ -2279,6 +2302,14 @@ html {
   font-size: 15.5px;
   color: #a2a2a2;
   border: 0px;
+}
+
+.contacts_form input:required:invalid, .contacts_form .message:required:invalid {
+  border-color: red;
+}
+
+.contacts_form input:required:valid, .contacts_form .message:required:valid {
+  border-color: red;
 }
 
 .contacts_form .message {
