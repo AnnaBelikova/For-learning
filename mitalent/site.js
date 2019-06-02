@@ -60,10 +60,6 @@ changeGalleryPoint('.gallery__points', '.points-gallery__point');
 
 
 
-
-
-
-
 /*let galleryPoints = document.querySelectorAll(".points-gallery__point");
 for (let j = 0; j <  galleryPoints.length; j++) {
     galleryPoints[j].addEventListener("click", function() {
@@ -97,7 +93,7 @@ const slides =[
     {id:1, name: 'Derek Anderson', job:'BRITISH COMEDIAN', video:'some src',title:'ENQUIRE ABOUT DEREK'},
     {id:2, name: 'Sarah Anderson', job:'ENGINEER', video:'some src',title:'ENQUIRE ABOUT SARAH'},
     {id:3, name: 'Jimmy Anderson', job:'JUDGE', video:'some src',title:'ENQUIRE ABOUT JIMMY'},
-    {id:4, name: 'Hovard Anderson', job:'LAYER', video:'some src',title:'ENQUIRE ABOUT HOVARD'}
+    {id:4, name: 'Hovard Anderson', job:'LAWYER', video:'some src',title:'ENQUIRE ABOUT HOVARD'}
 ];
 
 
@@ -194,3 +190,17 @@ for (let item of data) {
 }
 }
 
+(function($){
+  $(function() {
+    $('.menu__icon').on('click', function() {
+      $(this).closest('.menu')
+        .toggleClass('menu_state_open');
+    });
+    
+    $('.menu__links-item').on('click', function() {
+
+      $(this).closest('.menu')
+        .removeClass('menu_state_open');
+    });
+  });
+})(jQuery);

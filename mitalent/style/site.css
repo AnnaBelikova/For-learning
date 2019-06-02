@@ -551,8 +551,6 @@ header .search-controls {
     position: static;
     width: 94vw;
     height: 40vh;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 10px;
   }
 }
@@ -714,7 +712,7 @@ header .search-controls {
 
 @media (max-width: 480px) {
   .slider-left-arrow {
-    margin-right: 70vw;
+    margin-right: 71vw;
   }
 }
 
@@ -737,6 +735,7 @@ header .search-controls {
   .slide-content {
     margin-top: -20px;
     height: 70vw;
+    margin-left: 5vw;
   }
 }
 
@@ -1128,7 +1127,7 @@ header .search-controls {
 @media (max-width: 480px) {
   .second-screen .social-networks {
     margin-bottom: 0;
-    margin-top: -12%;
+    margin-top: -10%;
     font-size: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1178,6 +1177,7 @@ header .search-controls {
     display: block;
     width: 100vw;
     padding: 0;
+    margin-left: 0;
   }
 }
 
@@ -1193,6 +1193,7 @@ header .search-controls {
     display: block;
     width: 90%;
     height: 65vh;
+    margin-left: 5vw;
   }
 }
 
@@ -1412,6 +1413,12 @@ header .search-controls {
 .fourth-screen {
   position: relative;
   padding: 6.25%;
+}
+
+@media (max-width: 480px) {
+  .fourth-screen {
+    padding: 0;
+  }
 }
 
 .fourth-screen .head-fourth {
