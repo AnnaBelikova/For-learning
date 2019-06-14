@@ -461,8 +461,8 @@
             -o-transform: rotate(-45deg);
             transform: rotate(-45deg);
             @media (max-width: 480px){
-                width: 80px;
-                height: 80px;
+                width: 70px;
+                height: 70px;
                 margin-top:10px;
                 
             }
@@ -473,6 +473,7 @@
                 transform: rotate(45deg);
                 @media (max-width: 480px){
                     padding:20px;
+                    font-size: 28px;
                 }
             }
         }
@@ -509,6 +510,7 @@
 //Features
 .features_the_app{
     width:100vw;
+    height:150vh;
     .background_image{
         position:absolute;
         width:100%;
@@ -940,6 +942,7 @@
 //Скриншоты приложения
 .app_screenshots{
     width:100vw;
+    overflow: hidden;
     .title{
         font-size: 36px;
         text-align: center;
