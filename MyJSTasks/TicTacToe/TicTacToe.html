@@ -1,8 +1,30 @@
 
 <!DOCTYPE>
 <html>
-<head></head>
+<head>
+        <meta charset='utf-8'>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="ttt.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
 <body>
+        <button onclick=randomPlayer()>BEGIN!</button>
+        <div class='row'>
+                <div class='item' onclick=fillTheField(0,0,a);addTheSign(0,0);checkTheWin();computerStep()></div>
+                <div class='item' onclick=fillTheField(0,1,a);addTheSign(0,1);checkTheWin();computerStep()></div>
+                <div class='item' onclick=fillTheField(0,2,a);addTheSign(0,2);checkTheWin();computerStep()></div>
+            </div>
+            <div class='row'>
+                <div class='item' onclick=fillTheField(1,0,a);addTheSign(1,0);checkTheWin();computerStep()></div>
+                <div class='item' onclick=fillTheField(1,1,a);addTheSign(1,1);checkTheWin();computerStep()></div>
+                <div class='item' onclick=fillTheField(1,2,a);addTheSign(1,2);checkTheWin();computerStep()></div>
+            </div>
+            <div class='row'>
+                <div class='item' onclick=fillTheField(2,0,a);addTheSign(2,0);checkTheWin();computerStep()></div>
+                <div class='item' onclick=fillTheField(2,1,a);addTheSign(2,1);checkTheWin();computerStep()></div>
+                <div class='item' onclick=fillTheField(2,2,a);addTheSign(2,2);checkTheWin();computerStep()></div>
+            </div>
+
 <script src="TicTacToe.js"></script>
 </body>
 </html>
