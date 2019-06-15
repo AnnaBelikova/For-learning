@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
-        <button onclick=randomPlayer()>BEGIN!</button>
+        <button onclick=clearTheField();randomPlayer()>BEGIN!</button>
         <div class='row'>
                 <div class='item' onclick=fillTheField(0,0,a);addTheSign(0,0);checkTheWin();computerStep()></div>
                 <div class='item' onclick=fillTheField(0,1,a);addTheSign(0,1);checkTheWin();computerStep()></div>
