@@ -2,6 +2,11 @@
   background-color: lightblue;
 }
 
+h1 {
+  text-align: center;
+  color: blue;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,6 +14,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .item {
@@ -19,6 +27,43 @@
   cursor: pointer;
   font-size: 50px;
   color: white;
+  text-align: center;
+}
+
+.item:hover {
+  background-color: lightblue;
+}
+
+#item {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+button {
+  margin-top: 50px;
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  background-color: lightblue;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+  background-color: blue;
+  color: white;
+}
+
+.button {
   text-align: center;
 }
 /*# sourceMappingURL=ttt.css.map */
