@@ -40,12 +40,6 @@ mail.addEventListener('input', function(event){
   });
 
 
-//Screenshots
-
-
-
-
-  //Comments
  /* function changePoint(mainSelector, childSelector ){
     let object=document.querySelector(mainSelector);
     let commentPoints = object.querySelectorAll(childSelector);
