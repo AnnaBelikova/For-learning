@@ -189,10 +189,22 @@ function advance(){
       wrapper.style.transform=currentTranslate;
   }*/
 
+  let b=0;
   setTimeout(function run(){
     rotateSlide('wrapper', "comments_block__items");
-    setTimeout(run, 4000);
-  },4000);
+	let object=document.querySelector('.points');
+    let commentPoints = object.querySelectorAll('.comments-point');
+		let currentPoint=object.querySelector('.active');
+        currentPoint.className=currentPoint.className.replace(' active','');
+		if(b==commentPoints.length-1){
+			commentPoints[0].className += " active";
+			b=0;
+		}else{
+		commentPoints[b+1].className += " active";
+		b=b+1;
+		}
+    setTimeout(run, 6000);
+  },6000);
 
   function changePoint(mainSelector, childSelector ){
     let object=document.querySelector(mainSelector);
@@ -200,16 +212,19 @@ function advance(){
     for(let i=0; i< commentPoints.length; i++){
       commentPoints[i].addEventListener('click',function (){
         if (indexCom<i){
-          rotateSlide('wrapper', "comments_block__items");
-          if(indexCom+2==i){
-          rotateSlide('wrapper', "comments_block__items");
-          }
+			if(indexCom+2==i){
+				returnSlide('wrapper', "comments_block__items");
+			}else{
+				rotateSlide('wrapper', "comments_block__items");
+			}
         }else if(indexCom>i){
-          returnSlide('wrapper', "comments_block__items");
           if(indexCom-2==i){
-          returnSlide('wrapper', "comments_block__items");
-          }
-        }
+			  rotateSlide('wrapper', "comments_block__items");
+
+          }else{
+			  returnSlide('wrapper', "comments_block__items");
+			}
+		}
         indexCom=i;
         let currentPoint=object.querySelector('.active');
         currentPoint.className=currentPoint.className.replace(' active','');
