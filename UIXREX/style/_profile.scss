@@ -513,6 +513,7 @@
     background-image: url('../images/background.png');
     @media (max-width: 480px){
         height:210vh;
+        background-image:none;
     }
     .background_image{
         position:absolute;
@@ -1008,19 +1009,21 @@
         transform:translateX();
         margin-left:5px;
         @media (max-width: 480px){
-            margin-left:5px;
+            margin-left:10px;
             grid-template-columns:1fr;
-            gap: 10px;
+            gap: 20px;
         }
         @media (min-width: 800px) {
             gap: 26px;
         }
         @media (min-width: 1200px) {
-            margin-left:5px;
+            margin-left:15px;
             gap: 45px;
         }
         @media (min-width: 1800px) {
-            gap: 26px;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            gap: 75px;
+            margin-left:75px;
         }
         .gallery-item{
             background-color:#4085f6;
@@ -1087,21 +1090,20 @@
         line-height: 0.75;
         text-align: center;
         color: #ffffff;
-        margin-bottom:125px;
         padding-top:90px;
         @media (max-width: 480px){
             font-size: 24px;
             line-height: 1.2;
-            margin-bottom:80px;
             padding-top:20px;
         }
     }
     .comments_wrapper{
         display: grid;
         width:100vw;
+        overflow: hidden;
         grid-auto-flow:column;
         grid-template-columns:1fr 1fr 1fr;
-        margin-bottom:50px;
+        margin-bottom:0px;
         transform:translateX();
         &:nth-child(2) :hover{
             margin-left:-100vw;
@@ -1109,6 +1111,7 @@
     .comments_block__items{
         width:100vw;
         margin-bottom:50px;
+        margin-top:70px;
         display:flex;
         justify-content:center;
         transition: all 0.5s;
