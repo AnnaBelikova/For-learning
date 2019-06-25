@@ -750,7 +750,7 @@
     }
 }
 }
-//Prices
+//Priceы
 .pricing_plan{
     width:100vw;
     background-color: #f8f6f6;
@@ -1291,7 +1291,6 @@
         padding-right:129px;
         margin-right:14px;
     }
-        
         .location{
             display:flex;
             justify-content: flex-start;
@@ -1299,7 +1298,6 @@
             @media (max-width: 480px){
                 padding-bottom:33px;
             }
-            
             &:last-child{
                 padding-bottom:0px;
             }
@@ -1339,7 +1337,7 @@
     }
     
     input, .message{
-        margin-bottom:26px;
+        margin-bottom:0px;
         padding-left:13px;
         line-height: 2.26;
         letter-spacing: 0.2px;
@@ -1354,6 +1352,22 @@
             border-color: red;
         }
     }
+    .message_error{
+        height:26px;
+        font-size:14.5px;
+        
+    }
+        .invalid{
+            color: red;
+            display:block;
+        }
+        .valid{
+            color: green;
+            display:block;
+        }
+        .text{
+            display:none;
+        }
     .message{
         height:55%;
         margin-bottom:0px;
@@ -1380,6 +1394,15 @@
             box-shadow: 0 0 0 3px #ffffff;
             animation: shadow-pulse 1s infinite;
             border:none;
+            cursor:pointer;
+            &:hover{
+                box-shadow: 0 0 0 3px #ffffff;
+                animation: shadow-pulse 0.5s infinite;
+                background-color: #1760d7;
+            }
+            &:active{
+                background-color: #226be2;
+            }
 
         }
         .error {

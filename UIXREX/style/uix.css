@@ -2306,7 +2306,7 @@ html {
 }
 
 .contacts_form input, .contacts_form .message {
-  margin-bottom: 26px;
+  margin-bottom: 0px;
   padding-left: 13px;
   line-height: 2.26;
   letter-spacing: 0.2px;
@@ -2322,6 +2322,25 @@ html {
 
 .contacts_form input:required:valid, .contacts_form .message:required:valid {
   border-color: red;
+}
+
+.contacts_form .message_error {
+  height: 26px;
+  font-size: 14.5px;
+}
+
+.contacts_form .invalid {
+  color: red;
+  display: block;
+}
+
+.contacts_form .valid {
+  color: green;
+  display: block;
+}
+
+.contacts_form .text {
+  display: none;
 }
 
 .contacts_form .message {
@@ -2358,6 +2377,19 @@ html {
   -webkit-animation: shadow-pulse 1s infinite;
           animation: shadow-pulse 1s infinite;
   border: none;
+  cursor: pointer;
+}
+
+.contacts_form .send_the_form button:hover {
+  -webkit-box-shadow: 0 0 0 3px #ffffff;
+          box-shadow: 0 0 0 3px #ffffff;
+  -webkit-animation: shadow-pulse 0.5s infinite;
+          animation: shadow-pulse 0.5s infinite;
+  background-color: #1760d7;
+}
+
+.contacts_form .send_the_form button:active {
+  background-color: #226be2;
 }
 
 .contacts_form .send_the_form .error {

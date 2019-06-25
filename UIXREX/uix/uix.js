@@ -1,227 +1,134 @@
- /*function changePoint(mainSelector, childSelector ){
-        let object=document.querySelector(mainSelector);
-        let photoPoints = object.querySelectorAll(childSelector);
-        for(let i=0; i< photoPoints.length; i++){
-            photoPoints[i].addEventListener('click',function (){
-            let currentPoint=object.querySelector('.active');
-            currentPoint.className=currentPoint.className.replace(' active','');
-            this.className += " active";
-          })
-        }
-      };
-
-changePoint('.points', '.comments-point');*/
-setTimeout(function run(){
-  rotateSlide('gallery', 'gallery-item');
-  setTimeout(run, 4000);
-},4000);
 
 //Validation
 let name=document.getElementById('user_name');
-//name.setCustomValidity('Please, enter your name!');
+let msgName=document.getElementsByClassName("message_error")[0];
 name.addEventListener('input', function(event){
   if (name.validity.patternMismatch) {
-  name.setCustomValidity('Please, enter your name!');
-  } else {
+    msgName.className=msgName.className.replace(' invalid','');
+    msgName.className=msgName.className.replace(' valid','');
+	  name.setCustomValidity('Please, enter your name!');
+    msgName.textContent='Please, enter your name!';
+    msgName.className += ' invalid';
+  } else if(name.value.length===0){
+    msgName.textContent='Please fill the form!';
+    msgName.className += ' invalid';
+
+  }else{
   name.setCustomValidity('');
+  msgName.className=msgName.className.replace(' invalid','');
+  msgName.className=msgName.className.replace(' valid','');
+  msgName.className += ' valid';
+  msgName.textContent='Correct!';
   }
   });
 
 
 let mail=document.getElementById('e-mail');
-//mail.setCustomValidity('Please, enter your e-mail!');
+let msgMail=document.getElementsByClassName("message_error")[1];
+
+
 
 mail.addEventListener('input', function(event){
   if (mail.validity.typeMismatch) {
-  mail.setCustomValidity('Please, enter your e-mail!');
-  } else{
+    msgMail.className=msgName.className.replace(' invalid','');
+    msgMail.className=msgName.className.replace(' valid','');
+    msgMail.className += ' invalid';
+	  msgMail.textContent='Please, enter your e-mail!';
+    mail.setCustomValidity('Please, enter your e-mail!');
+  } else if(mail.value.length===0){
+    msgMail.className=msgName.className.replace(' invalid','');
+    msgMail.className=msgName.className.replace(' valid','');
+    msgMail.textContent='Please fill the form!';
+    msgMail.className += ' invalid';
+
+  }else{
   mail.setCustomValidity('');
+  msgMail.className=msgName.className.replace(' invalid','');
+  msgMail.className=msgName.className.replace(' valid','');
+  msgMail.className += ' valid';
+  msgMail.textContent='Correct!';
   }
   });
 
-
- /* function changePoint(mainSelector, childSelector ){
-    let object=document.querySelector(mainSelector);
-    let commentPoints = object.querySelectorAll(childSelector);
-    for(let i=0; i< commentPoints.length; i++){
-      commentPoints[i].addEventListener('click',function (){
-        let currentPoint=object.querySelector('.active');
-        currentPoint.className=currentPoint.className.replace(' active','');
-        this.className += " active";
-        let slideWidth=document.getElementById('slide').offsetWidth;
-        let wrapper=document.getElementById('wrapper');
-        let currentMarginLeft= Number(wrapper.style.marginLeft.replace('px',''));
-        let nextMarginLeft=-(slideWidth*i);
-        var start = Date.now();
-        var timer = setInterval(function() {
-          var timePassed = Date.now() - start;
-          wrapper.style.marginLeft = currentMarginLeft+(timePassed / 1000)*(nextMarginLeft-currentMarginLeft) + 'px';
-          if (timePassed >= 1000) {
-            clearInterval(timer); //
-            return;
-          }
-        }, 20);
-      })
-    }
+  let text=document.getElementById('textArea');
+  let msgText=document.getElementsByClassName("message_error")[2];
+  text.addEventListener('input', function(event){
+    if(text.value.length<10 ){
+    msgText.className=msgName.className.replace(' invalid','');
+    msgText.className=msgName.className.replace(' valid','');
+    msgText.textContent='Please fill the form!';
+    msgText.className += ' invalid';
+  }else if(text.value.length>=0){
+    msgText.className=msgName.className.replace(' invalid','');
+    msgText.className=msgName.className.replace(' valid','');
+    msgText.textContent='Correct!';
+    msgText.className += ' valid';
   }
-  changePoint('.points','.comments-point');
-  const leftArrowElement = document.querySelector('.left');
-  const rightArrowElement = document.querySelector('.right');
- function changeScreenshots(){
-  let slideWidth=document.getElementById('gallery').offsetWidth;
-  let wrapper=document.getElementById('gallery');
- leftArrowElement.addEventListener("click", function(){
-    let currentMarginLeft= Number(wrapper.style.marginLeft.replace('px',''));
-    let nextMarginLeft=0;
-    
-    if(currentMarginLeft===nextMarginLeft){
-      return;
-    }else{
-      let start = Date.now();
-      let timer = setInterval(function() {
-      let timePassed = Date.now() - start;
-      wrapper.style.marginLeft = currentMarginLeft+(timePassed / 1000)*(nextMarginLeft-currentMarginLeft) + 'px';
-      if (timePassed >= 1000) {
-        clearInterval(timer); //
-        return;
-      }
-    }, 20);
-    }
-  });
-  rightArrowElement.addEventListener("click", function(){
-    let currentMarginLeft= Number(wrapper.style.marginLeft.replace('px',''));
-    let nextMarginLeft=-(slideWidth);
-  
-    if(currentMarginLeft===nextMarginLeft){
-      return;
-    }else{
-      let start = Date.now();
-      let timer = setInterval(function() {
-      let timePassed = Date.now() - start;
-      wrapper.style.marginLeft = currentMarginLeft+(timePassed / 1000)*(nextMarginLeft-currentMarginLeft) + 'px';
-      if (timePassed >= 1000) {
-        clearInterval(timer); //
-        return;
-      }
-    }, 20);
-    }
-  });
-}
-function advance(){
-  let slideWidth=document.getElementById('gallery').offsetWidth;
-  let wrapper=document.getElementById('gallery');
-  let start = Date.now();
-  let timePassed = Date.now() - start;
-  let currentMarginLeft= Number(wrapper.style.marginLeft.replace('px',''));
-  let nextMarginLeft=-(slideWidth);
-  let timeout=setTimeout(function(){
-    if(currentMarginLeft=0){
-      wrapper.style.marginLeft = currentMarginLeft+(timePassed / 1000)*(nextMarginLeft-currentMarginLeft) + 'px';;
-    }else{
-      wrapper.style.marginLeft = currentMarginLeft+(timePassed / 1000)*(nextMarginLeft-currentMarginLeft) + 'px';
-    }
-    },4000);
-}
-  changeScreenshots();
-  advance();*/
-  /*changeScreenshots ('.screenshots_wrapper' , '.slider-left-arrow','.slider-right-arrow' )*/
+});
 
- let index=0;
-  let indexCom=0;
+let index=0;
 
   const leftArrowElement = document.querySelector('.left');
   const rightArrowElement = document.querySelector('.right');
   const maxSlideNum=10;
   const minSlideNum=0;
 
- /* let timeInterval=setInterval(function(){
-    ++index;
-    ++indexCom;
-    if(index>maxSlideNum){
-      index=minSlideNum;
-    }
-    if(indexCom>maxSlideNum){
-      indexCom=minSlideNum;
-    }
-    changeSlides(index, 'gallery', 'gallery');
-    changeSlides(indexCom, 'slide', 'wrapper');
-    changePointAuto('.points','.comments-point');
-    },4000);*/
+  let autoScreen = setInterval(function(){
+    rotateSlide('gallery', 'gallery-item');
+  },4000);
 
-
-    /*function changePointAuto(main, child){
-      let object=document.querySelector(main);
-      let commentPoints = object.querySelectorAll(child);
-      let currentPoint=object.querySelector('.active');
-      currentPoint.className=currentPoint.className.replace(' active','');
-      currentPoint=commentPoints[indexCom];
-      currentPoint.className += " active";
-      }*/
 
 
   rightArrowElement.addEventListener("click", function(){
-      ++index;
-      /*if(index>maxSlideNum){
-        index=maxSlideNum;
-      }*/
-      //changeSlides(index, 'gallery', 'gallery');
-      rotateSlide('gallery', 'gallery-item');
+    clearInterval(autoScreen);  
+    ++index;
+    rotateSlide('gallery', 'gallery-item');
   });
   leftArrowElement.addEventListener("click", function(){
+    clearInterval(autoScreen);  
       --index;
-      /*if(index<minSlideNum){
-        index=minSlideNum;
-      }*/
       returnSlide('gallery', 'gallery-item')
-      //changeSlides(index, 'gallery', 'gallery');
   });
 
-  /*let currentSlide=0;
-  let currentTranslateValue = 0;
-  let currentTranslate='translateX(0)';
 
- function doSlide(direction){
-    if(direction < 0 && currentSlide===0 || direction>0 && currentSlide===2)return;
-      currentSlide += direction;
-      currentTranslateValue=currentSlide*100;
-      currentTranslate = `translateX(0)(${currentTranslateValue}%)`;
-      let wrapper=document.getElementById('gallery');
-      wrapper.style.transform=currentTranslate;
-  }*/
 
-  let b=0;
-  setTimeout(function run(){
+  let indexCom=0;
+  let autoComments = setInterval(function (){
     rotateSlide('wrapper', "comments_block__items");
 	let object=document.querySelector('.points');
     let commentPoints = object.querySelectorAll('.comments-point');
 		let currentPoint=object.querySelector('.active');
         currentPoint.className=currentPoint.className.replace(' active','');
-		if(b==commentPoints.length-1){
+		if(indexCom==commentPoints.length-1){
 			commentPoints[0].className += " active";
-			b=0;
+			indexCom=0;
 		}else{
-		commentPoints[b+1].className += " active";
-		b=b+1;
+		commentPoints[indexCom+1].className += " active";
+    indexCom=indexCom+1;
 		}
-    setTimeout(run, 6000);
-  },6000);
+  },4000);
 
   function changePoint(mainSelector, childSelector ){
     let object=document.querySelector(mainSelector);
     let commentPoints = object.querySelectorAll(childSelector);
     for(let i=0; i< commentPoints.length; i++){
       commentPoints[i].addEventListener('click',function (){
-        if (indexCom<i){
+        window.clearInterval(autoComments);
+      if (indexCom<i){
 			if(indexCom+2==i){
+        window.clearInterval(autoComments);
 				returnSlide('wrapper', "comments_block__items");
 			}else{
+        window.clearInterval(autoComments);
 				rotateSlide('wrapper', "comments_block__items");
 			}
         }else if(indexCom>i){
           if(indexCom-2==i){
+            window.clearInterval(autoComments);
 			  rotateSlide('wrapper', "comments_block__items");
 
           }else{
+            window.clearInterval(autoComments);
 			  returnSlide('wrapper', "comments_block__items");
 			}
 		}
@@ -229,40 +136,13 @@ function advance(){
         let currentPoint=object.querySelector('.active');
         currentPoint.className=currentPoint.className.replace(' active','');
         this.className += " active";
+        window.clearInterval(autoComments);
     });
   }
 }
 
 changePoint('.points','.comments-point');
 
-
-  /*function changeSlides(index, idSlider, idWrapper ){
-
-        //let slideWidth=document.getElementById(idSlider).offsetWidth;
-        let wrapper=document.getElementById(idWrapper);
-        currentTranslateValue=index*(-20);
-        let currentTranslate = `translateX(${currentTranslateValue}%)`;
-        wrapper.style.transform=currentTranslate;
-        //let currentMarginLeft= Number(wrapper.style.marginLeft.replace('px',''));
-        //let nextMarginLeft=-(slideWidth*index);
-       // wrapper.style.marginLeft=nextMarginLeft+'px';
-
-        /*if(currentMarginLeft===nextMarginLeft){
-          return;
-        }else{
-          let start = Date.now();
-    
-          let timer = setInterval(function() {
-          let timePassed = Date.now() - start;
-          wrapper.style.marginLeft = currentMarginLeft+(timePassed / 1000)*(nextMarginLeft-currentMarginLeft) + 'px';
-          if (timePassed >= 1000) {
-            clearInterval(timer); //
-            return;
-          }
-    
-        }, 20);
-        }*/
-     /* };*/
 
 function rotateSlide(main, child){
  let mainArray=document.getElementById(main);
