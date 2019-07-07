@@ -322,11 +322,11 @@
         </div>
 
         <form class="contacts_and_form__form message_form">
-            <input type="text" id="user_name" placeholder="Name" class="poppins-light" required  pattern="[A-Z][A-Za-z' -]+">
+            <input type="text" id="user_name" placeholder="Name" class="poppins-light" required  pattern="[A-ZА-Я][A-Za-zА-Яа-яЁё' -]+">
             <div class='message_error user poppins-light'></div>
             <input type="email" id="e-mail" placeholder="EMail" class="poppins-light" required>
             <div class='message_error e-mail poppins-light'></div>
-            <textarea type="text" id='textArea' name="message" placeholder="Your message" class="message poppins-light" rows="3" cols="45" required maxlength="10"></textarea>
+            <textarea type="text" id='textArea' name="message" placeholder="Your message" class="message poppins-light" rows="3" cols="45"></textarea>
             <div class='message_error text poppins-light'></div>
             <div class="send_the_form poppins-medium ">
                 <button type="submit" onclick="event.preventDefault()">Send message</button>
