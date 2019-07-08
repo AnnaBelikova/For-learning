@@ -89,19 +89,6 @@ let index=0;
     for(let i=0; i< commentPoints.length; i++){
       commentPoints[i].addEventListener('click',function (){
         clearInterval(autoComments);
-        /*if (indexCom<i){
-			    if(indexCom+2==i){
-				    returnSlide('wrapper', "comments_block__items");
-			    }else{
-				    rotateSlide('wrapper', "comments_block__items");
-			    }
-        }else if(indexCom>i){
-          if(indexCom-2==i){
-			      rotateSlide('wrapper', "comments_block__items");
-          }else{
-			      returnSlide('wrapper', "comments_block__items");
-			    }
-      }*/
         if(indexCom<i && indexCom+2==i || indexCom>i && indexCom-2 != i){
           returnSlide('wrapper', "comments_block__items");
         }else if(indexCom!=i){
@@ -126,7 +113,7 @@ function rotateSlide(main, child){
  setTimeout(()=>{
  mainArray.appendChild(childElement);
  childElement.className=childElement.className.replace(' current','');
-  },950);
+  },1000);
 }
 
 function returnSlide(main, child){
@@ -134,12 +121,11 @@ function returnSlide(main, child){
   let childElements=mainArray.getElementsByClassName(child);
   let childElement=childElements[childElements.length-1];
   let refChildElement=mainArray.getElementsByClassName(child)[0];
-  childElement.className += ' current';
-  
   mainArray.insertBefore(childElement,refChildElement);
+  childElement.className += ' current';
   setTimeout(()=>{
   childElement.className=refChildElement.className.replace(' current','');
-},10);
+},50);
 }
 
 //Burger
