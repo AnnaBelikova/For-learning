@@ -618,6 +618,7 @@ header .search-controls {
 
 .slider-controls {
   position: absolute;
+  cursor: pointer;
   left: 0;
   bottom: 88px;
   width: 100%;
@@ -634,6 +635,7 @@ header .search-controls {
 
 .slider-pages {
   position: absolute;
+  cursor: pointer;
   left: 62px;
   bottom: 0;
   font-size: 12px;
@@ -695,6 +697,7 @@ header .search-controls {
 
 .slider-arrows {
   position: absolute;
+  font-size: 25px;
   left: 50%;
   bottom: 0;
 }
@@ -708,6 +711,10 @@ header .search-controls {
     left: 0;
     padding: 0;
   }
+}
+
+.slider-left-arrow {
+  margin-right: 30px;
 }
 
 @media (max-width: 480px) {
@@ -737,6 +744,16 @@ header .search-controls {
     height: 70vw;
     margin-left: 5vw;
   }
+}
+
+.slide-content .slide-video {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-content .slide-video video {
+  width: 100%;
+  height: 100%;
 }
 
 .slide-content:after {
@@ -877,8 +894,25 @@ header .search-controls {
   }
 }
 
+.second-screen .person-photo .image img {
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.second-screen .person-photo .image .active {
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
 .second-screen .person-photo .photo-points {
   position: absolute;
+  cursor: pointer;
   bottom: 0px;
   margin-left: auto;
   margin-right: auto;
@@ -1197,6 +1231,11 @@ header .search-controls {
   }
 }
 
+.third-screen .news-photo img {
+  width: 100%;
+  height: 100%;
+}
+
 .on-press {
   width: 50%;
   margin-top: 0;
@@ -1274,6 +1313,7 @@ header .search-controls {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  cursor: pointer;
 }
 
 @media (max-width: 480px) {
@@ -1326,7 +1366,7 @@ header .search-controls {
 
 .title-date {
   margin-left: 30px;
-  margin-top: -10px;
+  margin-top: -7px;
   margin-right: 10%;
   padding: 0;
   display: -webkit-box;

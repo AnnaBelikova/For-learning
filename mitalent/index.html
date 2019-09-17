@@ -33,6 +33,7 @@
         <div class="first-screen__rectangle rectangle-with-bg"></div>
         <div class="first-screen__main main-content flex-container">
             <div class="main-content__slider slider-meta">
+
                 <div class="slider-meta__info-person person-info">
                     <h1 class="person-info__name person-name poppins-regular">Derek Anderson</h1>
                     <div class="person-info__job person-job nunito-semibold">British Comedian</div>
@@ -54,7 +55,11 @@
             </div>
         <div class="first-screen__content slide-content">
 
-            <div class="slide-content__video slide-video"></div>
+            <div class="slide-content__video slide-video">
+                    <video class='video_slide' poster="img/Joffri(7).jpg" preload="none">
+                        <source src="video.mp4" type="video/mp4">
+                      </video>
+            </div>
             <div class="slide-content__button slide-button">
                 <i class="fas fa-play"></i>
             </div>
@@ -70,7 +75,12 @@
                 <div class="photo-points__point"></div>
                 <div class="photo-points__point"></div>
             </div>
-            <div class="person-photo__image image"></div>
+            <div id='person-photo' class="person-photo__image image">
+                <img src='img/Joffri (1).jpg' class=' active'>
+                <img src='img/Joffri (3).jpg' >
+                <img src='img/Joffri (5).jpg' >
+                <img src='img/Joffri(8).jpg'>
+            </div>
         </div>
         <div class="second-screen__profile profile">
             <div class="profile__menu menu-profile nunito-extrabold">
@@ -143,6 +153,7 @@
                 </div>
         </div>
         <div class="third-screen__photo news-photo">
+            <img src='img/Joffri (4).jpg'>
         </div>
     </section>
     <!--Начало четвертого экрана-->

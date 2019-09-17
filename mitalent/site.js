@@ -24,10 +24,74 @@ function changePoint(mainSelector, childSelector ){
 }
 
 
+
 //changePoint('.gallery__points', '.points-gallery__point');
-changePoint('.person-photo__points', '.photo-points__point');
+//changePoint('.person-photo__points', '.photo-points__point');
 changePoint('.profile__menu', '.menu-profile__point');
-//changePoint('.slider-pages ', '.slider-pages__page');
+changePoint('.slider-pages ', '.slider-pages__page');
+
+changePhoto('.person-photo__points', '.photo-points__point');
+
+function changePhoto(main, child){
+  let object=document.querySelector(main);
+  let photoPoints = object.querySelectorAll(child);
+  let photoPic=document.querySelector('.image');
+  let photos=photoPic.querySelectorAll('img');
+  for(let i=0; i< photoPoints.length; i++){
+      photoPoints[i].addEventListener('click',function (){
+        clearInterval(autoPhoto);
+      let currentPoint=object.querySelector('.active');
+      currentPoint.className=currentPoint.className.replace(' active','');
+      this.className += " active";
+      for(j=0; j<photos.length;j++){
+        photos[j].className=photos[j].className.replace(' active','');
+      }
+      
+      let ind= Array.prototype.indexOf.call(photoPoints, this); 
+      photos[ind].className += " active";
+      
+      autoPhoto=autoP();
+
+    })
+  }
+};
+
+let autoPhoto=autoP();
+function autoP(){
+  return setInterval(function(){
+    
+    rotateSlide('.person-photo__points', '.photo-points__point', 'person-photo', 'img' );
+    
+},4000);
+}
+
+function rotateSlide(mainPoints, childPoints, main, child){
+  let object=document.querySelector(mainPoints);
+  let photoPoints = object.querySelectorAll(childPoints);
+  let mainArray=document.getElementById(main);
+  let childElements=mainArray.querySelectorAll(child);
+  let childElement=mainArray.querySelector('.active');
+  childElement.className = childElement.className.replace(' active','');
+  let ind= Array.prototype.indexOf.call(childElements, childElement);
+  photoPoints[ind].className = photoPoints[ind].className.replace(' active','');
+
+  if(ind==3){
+    childElements[0].className +=' active';
+    photoPoints[0].className +=' active';
+  }else{
+    childElements[ind+1].className +=' active';
+    photoPoints[ind+1].className +=' active';
+  }
+}
+  //let nextElement=mainArray.querySelectorAll(child)[1];
+
+  //childElement.className=childElement.className.replace(' active','');
+  //mainArray.appendChild(childElement);
+ // nextElement.className += ' active';
+   
+ //}
+ 
+
 
 function changeGalleryPoint(mainSelector, childSelector){
   let object=document.querySelector(mainSelector);
@@ -57,6 +121,10 @@ function changeGalleryPoint(mainSelector, childSelector){
 }
 
 changeGalleryPoint('.gallery__points', '.points-gallery__point');
+
+
+
+
 
 
 
