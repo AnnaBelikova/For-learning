@@ -51,6 +51,7 @@ function changePhoto(main, child){
       photos[ind].className += " active";
       
       autoPhoto=autoP();
+      
 
     })
   }
