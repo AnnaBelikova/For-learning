@@ -1,7 +1,8 @@
- [
+{
+    "articles": [
         {
             "title": "Profile",
-            "short description": "Derek Anderson is a leading actor, comedian and writer.",
+            "short description": "Derek Anderson is a leading actor, comedian and writer."
             
         },
       {
@@ -20,3 +21,4 @@
         
       }
     ]
+  }
