@@ -1,0 +1,24 @@
+{
+    "articles": [
+        {
+            "title": "Profile",
+            "short description": "Derek Anderson is a leading actor, comedian and writer.",
+            
+        },
+      {
+        "title": "Press",
+        "short description": "Derek Anderson in press."
+        
+      },
+      {
+        "title": "Awards",
+        "short description": "Derek Anderson's awards."
+        
+      },
+      {
+        "title": "Credits",
+        "short description": "Some text."
+        
+      }
+    ]
+  }
