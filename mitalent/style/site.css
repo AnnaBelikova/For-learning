@@ -707,7 +707,7 @@ header .search-controls {
     position: absolute;
     margin-top: 10px;
     margin-bottom: 20px;
-    width: 80vw;
+    width: 100vw;
     left: 0;
     padding: 0;
   }
@@ -719,7 +719,7 @@ header .search-controls {
 
 @media (max-width: 480px) {
   .slider-left-arrow {
-    margin-right: 71vw;
+    margin-right: 75vw;
   }
 }
 
@@ -736,6 +736,20 @@ header .search-controls {
   height: 100%;
   background-color: #e2e8e8;
   position: relative;
+  /* &:after {
+            content: '';
+        width:56px;
+        height: 7px;
+        background-color: #ffffff;
+        position: absolute;
+        left:18%;
+        top:34%;
+        display: inline-block;
+        @media (max-width: 480px){
+            display:none;
+        }
+    
+    }*/
 }
 
 @media (max-width: 480px) {
@@ -756,24 +770,8 @@ header .search-controls {
   height: 100%;
 }
 
-.slide-content:after {
-  content: '';
-  width: 56px;
-  height: 7px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 18%;
-  top: 34%;
-  display: inline-block;
-}
-
-@media (max-width: 480px) {
-  .slide-content:after {
-    display: none;
-  }
-}
-
 .slide-content .slide-button {
+  cursor: pointer;
   width: 18%;
   min-width: 40px;
   max-width: 106px;
@@ -800,7 +798,19 @@ header .search-controls {
 
 .slide-content .slide-button i {
   position: relative;
+  display: none;
+}
+
+.slide-content .slide-button .fa-play {
   left: 3px;
+}
+
+.slide-content .slide-button .fa-pause {
+  left: 0px;
+}
+
+.slide-content .slide-button .active {
+  display: block;
 }
 
 @media (max-width: 480px) {
@@ -877,6 +887,7 @@ header .search-controls {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    height: 70vh;
   }
 }
 
@@ -884,30 +895,57 @@ header .search-controls {
   height: 100vh;
   max-height: 948px;
   background-color: #e2e8e8;
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 @media (max-width: 480px) {
   .second-screen .person-photo .image {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     height: 70vh;
-    margin-bottom: 20px;
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 
 .second-screen .person-photo .image img {
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
   height: 0;
   width: 0;
   opacity: 0;
 }
 
 .second-screen .person-photo .image .active {
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
   height: 100%;
   width: 100%;
   opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .second-screen .person-photo .image .active {
+    height: 100%;
+  }
 }
 
 .second-screen .person-photo .photo-points {
@@ -982,16 +1020,16 @@ header .search-controls {
     margin-left: auto;
     margin-right: auto;
     padding-right: 0px;
-    padding-top: 22%;
+    padding-top: 5%;
   }
 }
 
 .second-screen .profile .menu-profile .menu-profile__point {
+  cursor: pointer;
   color: #1a1a1d;
   opacity: 0.7;
   font-size: 12px;
   text-decoration: unset;
-  cursor: pointer;
   position: relative;
 }
 
@@ -1160,8 +1198,9 @@ header .search-controls {
 
 @media (max-width: 480px) {
   .second-screen .social-networks {
+    display: block;
     margin-bottom: 0;
-    margin-top: -10%;
+    margin-top: 20%;
     font-size: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1169,6 +1208,7 @@ header .search-controls {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 100vw;
+    position: static;
   }
 }
 

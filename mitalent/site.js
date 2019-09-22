@@ -28,7 +28,9 @@ function changePoint(mainSelector, childSelector ){
 //changePoint('.gallery__points', '.points-gallery__point');
 //changePoint('.person-photo__points', '.photo-points__point');
 changePoint('.profile__menu', '.menu-profile__point');
-changePoint('.slider-pages ', '.slider-pages__page');
+
+
+
 
 changePhoto('.person-photo__points', '.photo-points__point');
 
@@ -169,6 +171,28 @@ const slides =[
 const leftArrowElement = document.querySelector('.slider-left-arrow');
 const rightArrowElement = document.querySelector('.slider-right-arrow');
 
+function changeSlide(){
+  
+  let object=document.querySelector('.slider-pages ');
+  let photoPoints = object.querySelectorAll('.slider-pages__page');
+  for(let i=0; i< photoPoints.length; i++){
+    photoPoints[i].addEventListener('click',function(){
+      let current=object.querySelector('.active');
+      let ind= Array.prototype.indexOf.call(photoPoints,current);
+  
+      document.querySelector('h1').innerText = slides[ind].name;
+      document.querySelector('.person-job').innerText = slides[ind].job;
+      document.querySelector('.slide-title').innerText = slides[ind].title;
+    })
+  }
+};
+
+changePoint('.slider-pages ', '.slider-pages__page');
+
+changeSlide();
+
+
+
 
 function doSlide(direction) {
     currentSlide += direction;
@@ -273,3 +297,75 @@ for (let item of data) {
     });
   });
 })(jQuery);
+
+
+  
+
+
+
+      let title='';
+      let shortDesc='';
+      let navs=document.getElementsByClassName('menu-profile__point');
+      
+      var xhr2 = new XMLHttpRequest();
+      
+          
+      for(let i=0; i< navs.length; i++){
+        navs[i].addEventListener('click',function (){
+          //let ind= Array.prototype.indexOf.call(navs, this); 
+          let url='https://api.myjson.com/bins/l5zr5';
+          xhr2.open('GET', url);
+          xhr2.responseType = 'json';
+          xhr2.send();
+          xhr2.onload=function(){
+          let data = xhr2.response;
+          title=data[i].title;
+          shortDesc=data[i].short_info;
+          
+          document.querySelector('.title-profile').innerHTML = title;
+          document.querySelector('.info-profile__info').innerHTML = shortDesc;
+          }
+        
+        })
+      }
+    
+      let button=document.querySelector('.slide-content__button');
+
+      function playVideo(){
+
+        button.addEventListener('click',function(){
+          let play= document.querySelector('.fa-play');
+          let playClasses=play.classList;
+          let pause= document.querySelector('.fa-pause');
+          let pauseClasses=pause.classList;
+          let video=document.querySelector('video');
+          if(playClasses.contains("active")){ 
+          video.play();
+          pause.className += ' active';
+          play.className= play.className.replace(' active', '');
+          }else{
+            video.pause();
+            play.className += ' active';
+            pause.className= pause.className.replace(' active', '');
+          }
+        })
+      };
+
+      function stopVideo(){
+        let video=document.querySelector('video');
+        video.addEventListener("ended", function (){
+          this.src = this.src;
+          let play= document.querySelector('.fa-play');
+          let pause= document.querySelector('.fa-pause');
+          play.className += ' active';
+          pause.className= pause.className.replace(' active', '');
+      });
+      
+      }
+    
+      playVideo();
+      stopVideo();
+
+
+
+
