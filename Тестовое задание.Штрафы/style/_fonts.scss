@@ -1,0 +1,7 @@
+.caption-regular {
+    font-family: 'PT Sans Caption', sans-serif;
+}
+.caption-bold {
+    @extend .caption-regular;
+    font-weight: 700;
+}

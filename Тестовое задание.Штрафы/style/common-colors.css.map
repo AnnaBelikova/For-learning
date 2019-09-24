@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "common-colors.scss"
+    ],
+    "names": [],
+    "file": "common-colors.css"
+}

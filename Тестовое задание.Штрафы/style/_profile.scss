@@ -1,0 +1,166 @@
+/*Начало первого экрана*/
+.first-screen {
+    height: 180px;
+    max-width: 640px;
+    margin:auto;
+    background-image: url(../img/back.jpg);
+
+
+    .first-screen__searcher{
+        margin:auto;
+        padding-top:51.5px;
+        width:480px;
+
+        .searcher__title{
+            text-shadow: 0.5px 0.9px 2.5px rgba(0, 36, 69, 0.35);
+            font-size: 18px;
+            letter-spacing: -0.18px;
+            text-align: left;
+            color: $back-color;
+            padding-bottom:13px;
+        }
+        .input{
+            display:flex;
+            flex-direction:row;
+            align-content: center;
+            .input__form{
+                width: 404.5px;
+                height: 28px;
+                box-shadow: inset 0.3px 0.4px 1.5px 0 rgba(21, 38, 53, 0.82);
+                background-color: $back-color;
+                font-size: 9px;
+                text-align: left;
+                color: #969696;
+                border: 1px;
+            }
+        }
+        .find{
+            margin-left:3px;
+            width: 70.5px;
+            height: 30px;
+            box-shadow: 0.5px 0.9px 2.5px 0 rgba(0, 36, 69, 0.35), inset -0.3px -0.4px 0 0 rgba(154, 0, 7, 0.82);
+            background-color: #d30531;
+            border: 1px;
+            font-size: 10px;
+            text-align: center;
+            color: $back-color;
+        }
+        .description{
+            span{
+            opacity: 0.75;
+            font-size: 7.5px;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.75);
+            }
+        }
+    }
+    
+}
+.second-screen{
+    max-width: 640px;
+    margin:auto;
+    .pay-block{
+        margin:auto;
+        width: 306px;
+        height: 55px;
+        padding-bottom:43px;
+        h2{
+            font-size: 18px;
+            text-align: center;
+            color: $text-color;
+        }
+        .links{
+            text-align: center;
+        
+            a{
+                font-size: 9px;
+                line-height: 1.83;
+                text-align: center;
+                color: $main-color;
+                margin-right:8px;
+                text-decoration: none;
+                border-bottom: 1px dashed;
+            }
+            span{
+                font-size: 9px;
+                line-height: 1.83;
+                text-align: center;
+                color: $copy-color;
+                margin-right:8px;
+            }
+        }
+    }
+
+
+}
+.third-screen{
+    height: 1000px;
+    max-width: 640px;
+    
+    margin:auto;
+    .info-block{
+        padding-left:80px;
+        p{
+            font-size: 7.5px;
+            line-height: 1.4;
+            text-align: left;
+            color: #231f20;
+        }
+        .article{
+            display:flex;
+            flex-direction:row;
+            
+            img{
+                width: 154px;
+                height: 142.5px;
+                margin-left:22.5px;
+                padding-right:80px;
+            }
+            h3{
+                font-size: 12px;
+                text-align: left;
+                color: $text-color;
+                margin-bottom:16px;
+            }
+            .attention{
+                font-size: 6px;
+                line-height: 1.25;
+                letter-spacing: 0.9px;
+                color: $attention-color;
+                margin-top:16px;
+            }
+        }
+        .info-block__custom{
+            padding-bottom:35.5px;
+            width: 303px;
+            a{
+                
+                height: 11px;
+                font-family: PTSans-Caption;
+                font-size: 12px;
+                text-align: left;
+                color: #147ebe;
+                margin-bottom:16px;
+            }
+        }
+    }
+    .line{
+        width: 640px;
+        height: 0px;
+        border:0.25px solid #e6ecf1;
+    }
+}
+.fourth-screen{
+    max-width: 640px;
+    margin:auto;
+    .fourth-screen__title{
+        font-size: 12px;
+        text-align: center;
+        color: $text-color;
+    }
+    .fourth-screen__partners{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

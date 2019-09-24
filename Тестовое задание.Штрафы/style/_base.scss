@@ -1,0 +1,134 @@
+.header{
+    margin:auto;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 640px;
+    .login__button{
+        cursor: pointer;
+        height:18px;
+        width:46,5px;
+        font-size: 7.5px;
+        color:$main-color;
+        border: 1px solid $main-color;
+        background-color: $back-color;
+    }
+    .header__title{
+        width:146,5px;
+        height:21,5px;
+
+    }
+    .header__help{
+        font-size: 7.5px;
+        color:$main-color;
+        cursor: pointer;
+    }
+    
+}
+
+.footer{
+    max-width: 640px;
+    height: 117.5px;
+    margin:auto;
+    background-color: #e6ecf1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer__security{
+        height:75.5px;;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left:18px;
+        padding-top:23.5px;
+        padding-bottom:18.5px;
+        .security__copyright{
+            font-size: 7.5px;
+            color:$copy-color;
+            line-height: 1.4;
+            span{
+                display:block;
+            }
+        }
+        .security__logo{
+            img{
+                width:39.5px;
+                height:26px;
+            }
+        }
+    }
+    .footer__links{
+        height:73.5px;
+        padding-top:23.5px;
+        padding-bottom:20.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div{
+            font-size: 7.5px;
+            text-align: left;
+            line-height: 1;
+        }
+        .links{
+            font-size: 7.5px;
+            text-align: left;
+            line-height: 1;
+            color: $links-color;
+        }
+    }
+    .footer__contacts{
+        padding-top:23.5px;
+        padding-bottom:37px;
+        height: 56.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .phone{
+            font-size: 12px;
+            text-align: left;
+            color: $links-color; 
+        }
+        span{
+            display:block;
+            font-size: 6px;
+            text-align: left;
+            color: $copy-color; 
+        }
+        .contacts{
+            font-size: 7.5px;
+            text-align: left;
+            color: $links-color;
+        }
+    }
+    .footer__firma{
+        height:43.5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right:16px;
+        padding-top:23.5px;
+        padding-top:23.5px;
+        padding-bottom:50.5px;
+        .firma__copyrights{
+            margin-bottom:9px;
+            span{
+                display:block;
+                font-size: 7.5px;
+                line-height: 1.4;
+                text-align: right;
+                color: $copy-color;            
+            }
+            
+        }
+        .firma__logo{
+            width: 49px;
+            height: 17px;
+            
+        }
+    }
+}
+
+
+
