@@ -4,28 +4,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="./style/site.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/site.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="header__login button">
+        <div id="login" class="header__login button">
            <button class="login__button caption-regular">Войти</button> 
         </div>
         <div class="header__title title">
             <img class="image" src="img/title.jpg">
         </div>
-        <div class="header__help help">
-            <span class="help caption-regular">Помощь</span>
+        <div class="header__help help caption-regular">
+            <div class="help__button">Помощь</div>
+            <div class="help__menu menu">
+                <div class="menu__links">
+                    <div class="link"><a href=# class="caption-regular">Как это работает</a></div>
+                    <div class="link"><a href=# class="caption-regular">Вопрос-ответ</a></div>
+                    <div class="link"><a href=# class="caption-regular">Служба поддержки</a></div>
+                </div>
+            </div>
         </div>
+
     </header>
 <!--Начало первого экрана-->
     <section class="first-screen">
        <div class="first-screen__searcher">
            <div class="searcher__title caption-regular">Поиск начислений</div>
            <div class="input">
-               <input type="text" id="uname" name="name" placeholder="  Введите данные для поиска" class="input__form caption-regular">
+               <input type="text" id="search" name="search" placeholder="Введите данные для поиска" class="input__form caption-regular">
                <button class="find caption-regular">Найти</button>
            </div>
            <div class="searcher__descpiption description caption-regular">
@@ -44,6 +52,9 @@
                 <a href=# class="caption-regular">Услуги Росреестра</a>
                 <span class=" caption-regular"> и другие услуги</span>
             </div>
+        </div>
+        <div class="share">
+                <img src="img/share-icon.png">
         </div>
     </section>
     <!--Начало третьего экрана-->
@@ -72,40 +83,22 @@
             </div>
         </div>
         <div class="line"></div>
-        <div class="third-screen__info info-block">
-                <div class="info-block__article article">
-                    <div class="article__text">
-                        <h3 class="caption-regular">Штрафы ГИБДД</h3>
-                        <div class="text">
-                                <p class="caption-regular">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</p>
-                                <p class="caption-regular">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
-                                <div class="attention caption-bold">ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!</div>
-                                <p class="caption-regular">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%.  Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
-                                
-                        </div>
-            
-                    </div>
-                    <div class="article__image image">
-                        <img src="img/gibdd.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="line"></div>
             <div class="third-screen__info info-block">
             <div class="info-block__article article">
+                    <div class="article__image image-even">
+                            <img src="img/judge.jpg">
+                        </div>
                 <div class="article__text">
-                    <h3 class="caption-regular">Штрафы ГИБДД</h3>
+                    <h3 class="caption-regular">Судебные задолженности</h3>
                     <div class="text">
-                            <p class="caption-regular">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</p>
-                            <p class="caption-regular">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
-                            <div class="attention caption-bold">ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!</div>
-                            <p class="caption-regular">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%.  Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+                            <p class="even caption-regular">Для поиска начислений в ГИС ГМП укажите документы:<br>
+                                паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства</p>
+                            <p class="even caption-regular">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+                            <div class="attention caption-bold">УДОБНО!</div>
+                            <p class="even caption-regular">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
                             
                     </div>
         
-                </div>
-                <div class="article__image image">
-                    <img src="img/gibdd.jpg">
                 </div>
             </div>
         </div>
@@ -113,18 +106,35 @@
         <div class="third-screen__info info-block">
                 <div class="info-block__article article">
                     <div class="article__text">
-                        <h3 class="caption-regular">Штрафы ГИБДД</h3>
+                        <h3 class="caption-regular">Налоги </h3>
                         <div class="text">
-                                <p class="caption-regular">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</p>
-                                <p class="caption-regular">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
-                                <div class="attention caption-bold">ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!</div>
-                                <p class="caption-regular">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%.  Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+                                <p class="caption-regular">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, усли у вас на руках есть квитанция.</p>
+                                <div class="attention caption-bold">ВАЖНО</div>
+                                <p class="caption-regular">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
                                 
                         </div>
             
                     </div>
                     <div class="article__image image">
-                        <img src="img/gibdd.jpg">
+                        <img src="img/tax.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="third-screen__info info-block">
+                <div class="info-block__article article">
+                    <div class="article__image image-even">
+                        <img src="img/services.jpg">
+                    </div>
+                    <div class="article__text">
+                        <h3 class="caption-regular">Услуги Росреестра</h3>
+                        <div class="text">
+                                <p class="even caption-regular">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
+                                <div class="attention caption-bold">НЕТ КОДА?</div>
+                                <p class="even caption-regular">Если у вас еще нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг Росреестра.</p>
+                                
+                        </div>
+            
                     </div>
                 </div>
             </div>
@@ -135,28 +145,28 @@
     <div class="fourth-screen__title caption-regular">С нами работают</div>
     <div class="fourth-screen__partners">
         <div class="fourth-screen__partner">
-            <img>
-            <p>Партнер</p>
+            <img id="one" src="img/1.jpg">
+            <p class="caption-bold">Партнер 1</p>
         </div>
         <div class="fourth-screen__partner">
-            <img>
-            <p>Партнер</p>
+            <img id="two" src="img/2.jpg">
+            <p class="caption-bold">Компания-партнер с длинным названием</p>
         </div>
         <div class="fourth-screen__partner">
-            <img>
-            <p>Партнер</p>
+            <img id="three" src="img/3.jpg">
+            <p class="caption-bold">Партнер 3</p>
         </div>
         <div class="fourth-screen__partner">
-            <img>
-            <p>Партнер</p>
+            <img id="four" src="img/4.jpg">
+            <p class="caption-bold">Название партнера 4</p>
         </div>
         <div class="fourth-screen__partner">
-            <img>
-            <p>Партнер</p>
+            <img id="five" src="img/5.jpg">
+            <p class="caption-bold">Компания-партнер 5</p>
         </div>
         <div class="fourth-screen__partner">
-            <img>
-            <p>Партнер</p>
+            <img id="six" src="img/6.jpg">
+            <p class="caption-bold">Партнер 6 с длинным названием</p>
         </div>
     </div>
 
@@ -200,11 +210,29 @@
         </div>
 
     </footer>
+
+
+    <div class="modal__window hidden">
+        <div class="modal__registration registration">
+            <div class="modal__instruction instruction caption-regular">Введите логин и пароль для входа в Личный кабинет</div>
+            <div class="modal__input input"><input type="text" placeholder="  Логин" class="caption-regular"></div> 
+            <div class="modal__input input"> <input type="password" placeholder="  Пароль" class="caption-regular"></div> 
+            <button class="modal__button caption-regular">Войти</button>
+            <div class="registration__links">
+                <a href=# class="caption-regular">Забыли пароль?</a>
+                <a href=# class="caption-regular">Регистрация</a>
+            </div>
+        </div>
+        <div class="close">
+                <img src="img/close.png">
+        </div>
+    </div>
+    <div class="background hidden"></div>
     <script 
-            src="https://code.jquery.com/jquery-3.4.0.min.js"
-            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-crossorigin="anonymous"></script>
-    <script src="site.js"></script>
+        src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+        crossorigin="anonymous"></script>
+    <script src="js.js"></script>
 </body>
 
 </html>

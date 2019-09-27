@@ -350,9 +350,16 @@ template {
   font-weight: 700;
 }
 
+body {
+  position: relative;
+}
+
 .header {
-  margin: auto;
-  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -320px;
+  padding: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,13 +369,22 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 628px;
   max-width: 640px;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 1000;
+}
+
+.header img {
+  width: 146.5px;
+  height: 21.5px;
 }
 
 .header .login__button {
-  cursor: pointer;
   height: 18px;
   width: 46,5px;
+  cursor: pointer;
   font-size: 7.5px;
   color: #0777ba;
   border: 1px solid #0777ba;
@@ -384,6 +400,51 @@ template {
   font-size: 7.5px;
   color: #0777ba;
   cursor: pointer;
+  position: relative;
+}
+
+.header .header__help .help__menu {
+  position: absolute;
+  display: none;
+  right: 0;
+  width: 118.5px;
+  height: 83px;
+  background-image: url(../img/menu.png);
+  background-size: 120.5px 85px;
+}
+
+.header .header__help .help__menu .menu__links {
+  padding-left: 10px;
+  padding-top: 17.5px;
+}
+
+.header .header__help .help__menu .menu__links .link {
+  width: 104.5px;
+  height: 7.5px;
+  border-radius: 0.5px;
+  padding-top: 6px;
+  padding-left: 8px;
+  padding-bottom: 6px;
+  cursor: pointer;
+}
+
+.header .header__help .help__menu .menu__links :hover {
+  width: 94.5px;
+  height: 7.5px;
+  background-color: #e6ecf1;
+}
+
+.header .header__help .help__menu .menu__links :active {
+  background-color: lightgrey;
+}
+
+.header .header__help .help__menu .menu__links a {
+  font-size: 7.5px;
+  color: #0777ba;
+}
+
+.header .header__help .visible {
+  display: block;
 }
 
 .footer {
@@ -533,12 +594,49 @@ template {
   height: 17px;
 }
 
+.modal__window {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+
+.modal__window .hidden {
+  display: none;
+}
+
+.background {
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  z-index: 1001;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  color: white;
+  cursor: pointer;
+}
+
 /*Начало первого экрана*/
 .first-screen {
   height: 180px;
   max-width: 640px;
   margin: auto;
+  margin-top: 43.5px;
   background-image: url(../img/back.jpg);
+  background-size: 640px 180px;
 }
 
 .first-screen .first-screen__searcher {
@@ -569,6 +667,7 @@ template {
 }
 
 .first-screen .first-screen__searcher .input .input__form {
+  padding-left: 6px;
   width: 404.5px;
   height: 28px;
   -webkit-box-shadow: inset 0.3px 0.4px 1.5px 0 rgba(21, 38, 53, 0.82);
@@ -581,6 +680,7 @@ template {
 }
 
 .first-screen .first-screen__searcher .find {
+  cursor: pointer;
   margin-left: 3px;
   width: 70.5px;
   height: 30px;
@@ -603,19 +703,32 @@ template {
 .second-screen {
   max-width: 640px;
   margin: auto;
+  margin-top: 27px;
+  position: relative;
+}
+
+.second-screen .share {
+  position: absolute;
+  right: 40.5px;
+  top: 0px;
+}
+
+.second-screen .share img {
+  width: 10px;
+  height: 12px;
 }
 
 .second-screen .pay-block {
   margin: auto;
   width: 306px;
   height: 55px;
-  padding-bottom: 43px;
 }
 
 .second-screen .pay-block h2 {
   font-size: 18px;
   text-align: center;
   color: #231f20;
+  margin: 0;
 }
 
 .second-screen .pay-block .links {
@@ -641,9 +754,10 @@ template {
 }
 
 .third-screen {
-  height: 1000px;
+  height: 934.5px;
   max-width: 640px;
-  margin: auto;
+  padding-top: 43px;
+  margin: 0 auto;
 }
 
 .third-screen .info-block {
@@ -657,6 +771,10 @@ template {
   color: #231f20;
 }
 
+.third-screen .info-block .even {
+  margin-right: 80px;
+}
+
 .third-screen .info-block .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -667,11 +785,18 @@ template {
           flex-direction: row;
 }
 
+.third-screen .info-block .article .image-even {
+  margin-right: 22.5px;
+}
+
+.third-screen .info-block .article .image {
+  margin-left: 22.5px;
+  padding-right: 80px;
+}
+
 .third-screen .info-block .article img {
   width: 154px;
   height: 142.5px;
-  margin-left: 22.5px;
-  padding-right: 80px;
 }
 
 .third-screen .info-block .article h3 {
@@ -679,6 +804,7 @@ template {
   text-align: left;
   color: #231f20;
   margin-bottom: 16px;
+  margin: 0;
 }
 
 .third-screen .info-block .article .attention {
@@ -690,7 +816,6 @@ template {
 }
 
 .third-screen .info-block .info-block__custom {
-  padding-bottom: 35.5px;
   width: 303px;
 }
 
@@ -707,6 +832,8 @@ template {
   width: 640px;
   height: 0px;
   border: 0.25px solid #e6ecf1;
+  margin-bottom: 37px;
+  margin-top: 37px;
 }
 
 .fourth-screen {
@@ -731,5 +858,151 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 78px;
+  padding-left: 82px;
+  padding-bottom: 29px;
+  padding-top: 23.5px;
+}
+
+.fourth-screen .fourth-screen__partners .fourth-screen__partner {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fourth-screen .fourth-screen__partners .fourth-screen__partner #one {
+  width: 54.5px;
+  height: 43px;
+  padding-bottom: 14.5px;
+}
+
+.fourth-screen .fourth-screen__partners .fourth-screen__partner #two {
+  width: 38px;
+  height: 44px;
+  padding-bottom: 14px;
+}
+
+.fourth-screen .fourth-screen__partners .fourth-screen__partner #three {
+  width: 48.5px;
+  height: 40.5px;
+  padding-bottom: 15.5px;
+}
+
+.fourth-screen .fourth-screen__partners .fourth-screen__partner #four {
+  width: 74px;
+  height: 31px;
+  padding-bottom: 20.5px;
+}
+
+.fourth-screen .fourth-screen__partners .fourth-screen__partner #five {
+  width: 58px;
+  height: 43px;
+  padding-bottom: 14.5px;
+}
+
+.fourth-screen .fourth-screen__partners .fourth-screen__partner #six {
+  width: 55px;
+  height: 38px;
+  padding-bottom: 17px;
+}
+
+.fourth-screen .fourth-screen__partners .fourth-screen__partner p {
+  width: 66px;
+  font-size: 6px;
+  text-align: center;
+  color: #231f20;
+  margin: 0;
+}
+
+.registration {
+  position: relative;
+  width: 200px;
+  height: 237.5px;
+  background-color: #ffffff;
+}
+
+.registration .instruction {
+  padding-top: 19px;
+  padding-left: 20.5px;
+  padding-right: 49px;
+  padding-bottom: 17.5px;
+  font-size: 7.5px;
+  line-height: 1.33;
+  text-align: left;
+  color: #000000;
+}
+
+.registration .input {
+  width: 161px;
+  height: 30px;
+  margin-bottom: 9.5px;
+  margin-left: 19.5px;
+}
+
+.registration .input input {
+  width: 159px;
+  height: 28px;
+  -webkit-box-shadow: inset 0.3px 0.4px 1.5px 0 rgba(21, 38, 53, 0.82);
+          box-shadow: inset 0.3px 0.4px 1.5px 0 rgba(21, 38, 53, 0.82);
+  background-color: #ffffff;
+  font-size: 9px;
+  text-align: left;
+  color: #969696;
+  border: 0.3px;
+}
+
+.registration .modal__button {
+  width: 161px;
+  height: 30px;
+  margin-left: 19.5px;
+  margin-right: 19.5px;
+  -webkit-box-shadow: 0.5px 0.9px 2.5px 0 rgba(0, 36, 69, 0.35), inset -0.3px -0.4px 0 0 rgba(154, 0, 7, 0.82);
+          box-shadow: 0.5px 0.9px 2.5px 0 rgba(0, 36, 69, 0.35), inset -0.3px -0.4px 0 0 rgba(154, 0, 7, 0.82);
+  border: 0.5px;
+  background-color: #d30531;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.registration .registration__links {
+  margin-top: 21px;
+  margin-left: 19.5px;
+}
+
+.registration .registration__links a {
+  display: block;
+  font-size: 7.5px;
+  text-align: left;
+  color: #0777ba;
+  margin-bottom: 17px;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: -21.5px;
+  cursor: pointer;
+}
+
+.close img {
+  width: 12.5px;
+  height: 12.5px;
 }
 /*# sourceMappingURL=site.css.map */
