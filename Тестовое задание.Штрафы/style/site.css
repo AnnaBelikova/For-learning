@@ -982,7 +982,7 @@ body {
 }
 
 .first-screen .first-screen__searcher .input .input__form {
-  width: 820px;
+  width: 800px;
   height: 60px;
   padding: 0;
   -webkit-box-shadow: inset 0.5px 0.9px 3px 0 rgba(21, 38, 53, 0.82);
@@ -993,6 +993,7 @@ body {
   text-align: left;
   color: #969696;
   border: 1px;
+  padding-left: 20px;
 }
 
 @media (max-width: 480px) {
