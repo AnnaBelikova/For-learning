@@ -6,13 +6,17 @@ body{
     position:absolute;
     top:0;
     left:50%; 
-    margin-left:-320px;
-    padding:6px;
+    margin-left:-640px;
+    padding-top:15px;
+    padding-bottom:12px;
+    padding-left:20px;
+    padding-right:21px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width:628px;
-    max-width: 640px;
+    width:1239px;
+    max-width: 1280px;
+    height:40px;
     background-color: $back-color;
     position: fixed;
     z-index:1000;
@@ -30,8 +34,8 @@ body{
         left:0;
     }
     .header__title{
-        width:146.5px;
-        height:21.5px;
+        width: 293px;
+        height: 43px;
         @media (max-width: 480px){
             margin-left:22px;
             width: 98.5px;
@@ -40,27 +44,36 @@ body{
         }
     }
     img{
-        width: 146.5px;
-        height: 21.5px;
+        width: 293px;
+        height: 43px;
         @media (max-width: 480px){
             width: 98.5px;
             height: 14.5px;
         }
 
     }
+    .header__login{
+        width: 93px;
+        height: 36px;
+        margin-right:366px;
+    
         .login__button{
-            height:18px;
-            width:46.5px;
+            width: 93px;
+            height: 36px;
+            border: solid 2px $main-color;
+            padding-bottom: 4px;
+            padding-left: 7px;
+            letter-spacing: 0.4px;
             cursor: pointer;
-            font-size: 7.5px;
-            color:$main-color;
-            border: 1px solid $main-color;
+            font-size: 15px;
             background-color: $back-color;
+            color:$main-color;
             @media (max-width: 480px){
                 display:none;
             
             }
         }
+    }
         .show{
             @media (max-width: 480px){
             display:block;
@@ -87,11 +100,14 @@ body{
         }
     }
     .header__help{
-        
-        font-size: 7.5px;
+        margin-left: 424.5px;
+        letter-spacing: 0.19px;
+        font-size: 15px;
         color:$main-color;
+        line-height:0.8;
         cursor: pointer;
         position: relative;
+        height: 13px;
         @media (max-width: 480px){
             position: absolute;
             width: 180px;
@@ -108,11 +124,12 @@ body{
         .help__menu{
             position: absolute;
             display:none;
-            right:0;
-            width: 118.5px;
-            height: 83px;
+            right: -4px;
+            top: 18px;
+            width: 245px;
+            height: 167px;
             background-image: url(../img/menu.png);
-            background-size:120.5px 85px;
+            background-size:245px 167px;
             @media (max-width: 480px){
                 width: 180px;
                 height: 101.5px;
@@ -121,20 +138,22 @@ body{
                 background-image:none;
             }
             .menu__links{
-                padding-left:10px;
-                padding-top:17.5px;
+                padding-left: 9px;
+                padding-top: 24px;
                 @media (max-width: 480px){
                     padding-left:0px;
                     padding-top:0px;
                 }
                 
                 .link{
-                    width: 104.5px;
-                    height: 7.5px;
+                    width: 209px;
+                    height: 15px;
                     border-radius: 0.5px;
-                    padding-top:6px;
-                    padding-left:8px;
-                    padding-bottom:6px;
+                    padding-top:12px;
+                    padding-left:16px;
+                    padding-bottom:12px;
+                    margin-bottom:8px;
+                    margin-left:0px;
                     cursor: pointer;
                     @media (max-width: 480px){
                         width: 162.5px;
@@ -147,8 +166,8 @@ body{
                     }
                 }
                 :hover{
-                    width: 94.5px;
-                    height: 7.5px;
+                    width: 209px;
+                    
                     background-color: #e6ecf1;
                     @media (max-width: 480px){
                         width: 162.5px;
@@ -164,7 +183,7 @@ body{
                 }
 
                 a{
-                    font-size: 7.5px;
+                    font-size: 15px;
                     color: $main-color;
                 }
             }
@@ -178,12 +197,12 @@ body{
 
 
 .footer{
-    max-width: 640px;
-    height: 117.5px;
+    max-width: 1280px;
+    height: 235px;
     margin:auto;
     background-color: #e6ecf1;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     
     
@@ -211,13 +230,12 @@ body{
         }
     }
     .footer__security{
-        height:75.5px;;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-left:18px;
-        padding-top:23.5px;
-        padding-bottom:18.5px;
+        margin-left:36px;
+        margin-top:44px;
+        margin-bottom:37px;
         
         @media (max-width: 480px){
             padding:0;
@@ -227,9 +245,10 @@ body{
         }  
         
         .security__copyright{
-            font-size: 7.5px;
+            font-size: 15px;
             color:$copy-color;
             line-height: 1.4;
+            margin-bottom:60px;
             @media (max-width: 480px){
                 padding-top:10px;
                 text-align: center;
@@ -249,8 +268,8 @@ body{
         }
         .security__logo{
             img{
-                width:39.5px;
-                height:26px;
+                width: 79px;
+                height: 52px;
                 @media (max-width: 480px){
                     position:absolute;
                     left:50%;
@@ -261,9 +280,12 @@ body{
         }
     }
     .footer__links{
-        height:73.5px;
-        padding-top:23.5px;
-        padding-bottom:20.5px;
+        width: 132px;
+        height: 147px;
+        margin-top:44px;
+        margin-bottom:41px;
+        margin-left:170px;
+        margin-right:120px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -271,54 +293,65 @@ body{
             display:none;
         }
         div{
-            font-size: 7.5px;
+            font-size: 15px;
             text-align: left;
             line-height: 1;
         }
         .links{
-            font-size: 7.5px;
+            font-size: 15px;
             text-align: left;
             line-height: 1;
             color: $links-color;
+            letter-spacing: 0.2px;
         }
     }
     .footer__contacts{
-        padding-top:23.5px;
-        padding-bottom:37px;
-        height: 56.5px;
+        margin-top:55px;
+        margin-bottom:74px;
+        margin-right:174px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         @media (max-width: 480px){
             display:none;
         }
 
         .phone{
-            font-size: 12px;
+            margin-top: 1px;
+            letter-spacing: 0px;
+            margin-top: 8px;
+            font-size: 24px;
             text-align: left;
             color: $links-color; 
         }
         span{
             display:block;
-            font-size: 6px;
+            font-size: 12px;
             text-align: left;
+            line-height: 1.82;
             color: $copy-color; 
+            letter-spacing: 0.25px;
+            margin-bottom: 14.5px;
+            margin-top: 1px;
         }
         .contacts{
-            font-size: 7.5px;
+            font-size: 15px;
             text-align: left;
             color: $links-color;
+            margin-bottom: 12px;
+            margin-top: 5px;
+            letter-spacing: 0.17px;
         }
     }
     .footer__firma{
-        height:43.5px;
+        height:87px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding-right:16px;
-        padding-top:23.5px;
-        padding-top:23.5px;
-        padding-bottom:50.5px;
+        margin-right:16px;
+        margin-top:37px;
+        margin-bottom:101px;
+        padding-right: 2px;
         @media (max-width: 480px){
             width:142.5px;
             margin:0 auto;
@@ -331,6 +364,7 @@ body{
         
         .firma__copyrights{
             display:inline;
+            padding-bottom:16px;
             @media (max-width: 480px){
                 display:block;
                 height:100%;
@@ -339,10 +373,11 @@ body{
             
             span{
                 display:block;
-                font-size: 7.5px;
+                font-size: 15px;
                 line-height: 1.4;
                 text-align: right;
-                color: $copy-color;  
+                color: $copy-color;
+                letter-spacing: 0.09px;  
                 @media (max-width: 480px){
                     display:inline;
                     font-size: 6.5px;
@@ -353,8 +388,9 @@ body{
             
         }
         .firma__logo{
-            width: 49px;
-            height: 17px;
+            width: 98px;
+            height: 34px;
+            
             @media (max-width: 480px){
                 display:none;
             }
