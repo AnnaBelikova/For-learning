@@ -1,0 +1,94 @@
+body{
+    margin:auto;
+    
+}
+header{
+    
+    background-image: url(../images/back.png);
+    background-size: cover;
+  
+    h1{
+        font-size: 127.5px;
+        line-height: 1.18;
+        color: #ffffff;
+        font-weight: normal;
+        text-align: center;
+        margin-top:44px;
+        margin-bottom:-20px;
+        @media (max-width: 800px){
+            font-size: 100px;
+        }
+        @media (max-width: 600px){
+            font-size: 80px;
+            line-height: 1;
+            margin-top:24px;
+        }
+    }
+    .date_and_logo{
+        display:flex;
+        justify-content: space-between;
+        padding-top:50px;
+        margin-left:89px;
+        margin-right:95px;
+        @media (max-width: 500px){
+            margin-left:10px;
+        margin-right:10px;
+        padding-top:10px;
+        }
+        .date{
+            font-size: 21px;
+            line-height: 1.81;
+            text-align: left;
+            color: #ffffff;
+            margin:0;
+        }
+        .logo{
+            width: 92px;
+            height: 28px;
+        }
+    }
+    .adress{
+        .adress__center{
+            font-size: 23px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        .hall{
+            font-size: 23px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            @media (max-width: 500px){
+                font-size: 18px;
+            }
+        }
+    }padding-bottom: 28%;
+    @media (max-width: 500px){
+        padding-bottom: 40%;
+    }
+   
+    
+    
+}
+footer{
+    max-width: 1200px;
+    background-color: #17386c;
+    padding-top:7px;
+    padding-bottom:11px;
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+
+

@@ -1,0 +1,212 @@
+.theme_of_lecture{
+    margin-bottom:78px;
+    @media (max-width: 600px){
+        margin-bottom:48px;
+    }
+    .theme{
+        font-size: 25px;
+        font-weight: normal;
+        line-height: normal;
+        text-align: center;
+        color: #4b4b4b;
+    }
+    .lecture__title{
+        font-size: 29px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: normal;
+        text-align: center;
+        color: #061935;
+        text-transform: uppercase;
+        font-weight: bold;
+        @media (max-width: 650px){
+            font-size: 20px;
+        }
+    }
+}
+
+.auditory{
+    background-color: #f0f4fb;
+    width:94.5%;
+    margin: auto;
+    .interest{
+        padding-top:48px;
+        margin-bottom:48px;
+        font-size: 25px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #061935;
+    }
+    .auditory__items{
+        display:flex;
+        justify-content: center;
+        @media (max-width: 800px){
+            display:block;
+        }
+        .item{
+            margin-right:61.5px;
+            margin-left:61.5px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                text-align: center;
+            }
+            .item__type{
+                font-size: 25px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #061935;
+                text-transform: uppercase;
+                margin-top:31px;
+                margin-bottom:2px;
+            }
+            .type__descr{
+                font-size: 17px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #061935;
+                margin-top:0px;
+                margin-bottom:41px;
+            }
+        }
+    }
+}
+
+.lecturer{
+    display: flex;
+    align-content: center;
+    width:94.5%;
+    margin:auto;
+    
+    margin-top: -5vh;
+    @media (max-width: 1150px){
+        margin-top:0;
+    }
+   
+    .info{
+        margin:auto;
+        z-index: 0;
+        @media (max-width: 1150px){
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        img{
+        @media (max-width: 600px){
+            width:90vw;
+        }
+    }
+    }
+    .photo{
+        @media (max-width: 1150px){
+            display:none;
+        }
+    }
+}
+.programm{
+    background-image: url(../images/back2.png);
+    background-size: cover;
+    margin-top:-6%;
+    
+    .background{
+        width:71%;
+        margin:auto;
+        padding-bottom: 83px;
+    
+    .title{
+        font-size: 29px;
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding-top:99px;
+    }
+    .report{
+        display:flex;
+        font-size: 25px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        @media (max-width: 600px){
+            font-size: 18px;
+        }
+        .report__time{
+            margin-right:20px;
+        }
+    }
+    }
+}
+.knowledge{
+    margin-top:67px;
+    margin-bottom:13px;
+    .title{
+        font-size: 25px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #061935;
+        margin-bottom:54px;
+    }
+    .items{
+        display:flex;
+        justify-content: center; 
+        justify-content: space-around;
+        @media (max-width: 800px){
+            display:block;
+        }
+        .item{
+            display:flex;
+            flex-direction: column;
+            @media (max-width: 800px){
+                margin-top:20px;
+            }
+           
+            align-items: center;
+            .item__descr{
+            font-size: 17px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #061935;
+            }
+        }
+    }
+}
+.request{
+    background-image: url(../images/9_8.png);
+    background-size: cover;
+    .button{
+        padding-top:216px;
+        padding-bottom: 126px;
+        padding:auto;
+        text-align: center;
+        cursor: pointer;
+       img{ @media (max-width: 600px){
+            width:90%;
+        }
+    }
+    }
+}

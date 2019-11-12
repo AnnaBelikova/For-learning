@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: Century Gothic;
+    src: url(fonts/GOTHIC.ttf);
+
+    font-family: Century Gothic Bold;
+    src: url(fonts/GOTHICB.ttf);
+
+    font-family: Century Gothic Italic;
+    src: url(fonts/GOTHICI.ttf);
+
+    font-family: Century Gothic Bold Italic;
+    src: url(fonts/GOTHICBI.ttf);
+
+    font-family: AlexandraZeferinoThree;
+    src: url(fonts/4238.ttf);
+}
+
+.alexandra {
+    font-family: 'Alexandra Zeferino Three', arial;
+}
+
+.gothic-regular {
+    font-family: 'Century Gothic', sans-serif; 
+}
+
+.gothic-semibold {
+    font-family: 'Century Gothic Bold Italic', sans-serif; 
+}
+
+.gothic-bold {
+    font-family: 'Century Gothic Bold', sans-serif; 
+}
+
+.gothic-italic {
+    font-family: 'Century Gothic Italic', sans-serif; 
+}
